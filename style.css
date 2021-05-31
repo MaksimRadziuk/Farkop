@@ -1,0 +1,28 @@
+:root {
+	--dark-color: #3a363a;
+	--white-color: #fff;
+	--grey-color: #bab0ab;
+	--lightgrey-color: #f1eff1;
+	--red-color: #c01738;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: SF UI Display, open sans;
+	font-weight: 400;
+}
+ul, ol {
+	list-style: none;
+}
+body {
+	width: 100%;
+	max-width: 100vw;
+	overflow-x: hidden;
+	background-color: #fff;
+}
+a {
+	text-decoration: none;
+}
+
+
