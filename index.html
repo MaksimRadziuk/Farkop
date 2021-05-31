@@ -8,19 +8,195 @@
 	<link rel="stylesheet" href="fonts/stylesheet.css">
 	<link rel="stylesheet" href="lib/slick/slick-theme.css">
 	<link rel="stylesheet" href="lib/slick/slick.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/main.css">
 </head>
 <body>
 
  <div class="wrap">
-  	
+ 	<div class="up"><img src="img/button-up.png" alt="go up"></div>
+
+ 	<div class="cookieBar">
+ 		<div class="container">
+ 			<div class="close">
+	 			<span></span>
+	 			<span></span>
+	 		</div>
+	 		<p>Этот сайт использует cookie для хранения данных. Продолжая использовать сайт, вы даете согласие на работу с этими файлами</p>
+	 		<button>Принять и закрыть</button>
+ 		</div>
+ 	</div>
+
+  	<header>
+		<div class="topbar">
+			<div class="container">
+				<div class="logo__wrap">
+					<a href="index.html"><img src="img/logo-dark.png" alt="Farkop-auto logo"></a>
+				</div>
+				<div class="info__wrap">
+					<a href="tel:74959759408"><span><i class="fa fa-phone" aria-hidden="true"></i></span>+7 (495) 975 94 08</a>
+					<p>10:00 - 20:00 Пн - Вс</p>
+				</div>
+				<div class="info__wrap">
+					<p class="address"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Москва, проспект Мира, 186Ас2</p>
+					<p>3 автосервиса</p>
+				</div>
+				<div class="social__wrap">
+					<a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				</div>
+				<div class="basket__wrap">
+					<div class="basket__wrap-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+					<div class="basket__wrap-amount">5</div>
+					<div class="basket__wrap-text">товаров</div>
+				</div>
+			</div>
+		</div>
+		<div class="navbar">
+			<div class="container">
+				<ul>
+					<li class="parent_menu">
+						<a href="catalog.html">Каталог</a><div class="caret"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+						<div class="submenu">
+							<ul>
+								<li><a href="#">Фаркопы</a></li>
+								<li><a href="#">Электрика и аксессуары для фаркопов</a></li>
+								<li><a href="#">Боксы на крышу</a></li>
+								<li><a href="#">Велобагажники</a></li>
+								<li><a href="#">Крепления для лыж</a></li>
+								<li><a href="#">Защиты картера</a></li>
+								<li><a href="#">Рейлинги и багажники</a></li>
+								<li><a href="#">Парктроники</a></li>
+								<li><a href="#">Велобагажники</a></li>
+								<li><a href="#">Крепления для лыж</a></li>
+								<li><a href="#">Защиты картера</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="service.html">Услуги и цены</a></li>
+					<li><a href="portfolio.html">Портфолио</a></li>
+					<li><a href="faq.html">Вопрос-Ответ</a></li>
+					<li><a href="feedback.html">Отзывы</a></li>
+					<li><a href="about.html">О нас</a></li>
+					<li><a href="news.html">Новости и статьи</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+				</ul>
+				<div class="navbar__search">
+					<div class="navbar__search-visible">
+						<img src="img/icon-search.png" alt="search">
+						<p>Поиск</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search__popup">
+			<form class="search__popup-wrap">
+				<img src="img/icon-search.png" alt="search image">
+				<input type="text" placeholder="Я ищу...">
+				<button type="submit">Поиск</button>
+			</form>
+		</div>
+  	</header>
+
+  	<footer>
+  		<div class="container">
+  			<div class="footer__block">
+  				<a href="#"><img src="img/logo-lght.png" alt="logo"></a>
+  				<div class="copyright">FARKOP-AUTO © 1996-2021</div>
+  				<p>Информация на сайте несёт информационный характер и не является публичной офертой, определяемой положениями Статьи 437 (2) ГК РФ</p>
+  			</div>
+  			<div class="footer__block">
+  				<ul>
+  					<li><a href="#">Фаркопы</a></li>
+  					<li><a href="#">Электрика и аксессуары для фаркопов</a></li>
+  					<li><a href="#">Боксы на крышу</a></li>
+  					<li><a href="#">Велобагажники</a></li>
+  					<li><a href="#">Крепления для лыж</a></li>
+  					<li><a href="#">Защиты картера</a></li>
+  					<li><a href="#">Рейлинги и багажники</a></li>
+  					<li><a href="#">Парктроники</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer__block">
+  				<ul>
+  					<li><a href="#">О компании</a></li>
+  					<li><a href="#">Услуги</a></li>
+  					<li><a href="#">Отзывы</a></li>
+  					<li><a href="#">Статьи и новости</a></li>
+  					<li><a href="#">Контакты</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer__block">
+  				<ul>
+  					<li><a href="#">Вопросы и ответы</a></li>
+  					<li><a href="#">Оплата</a></li>
+  					<li><a href="#">Доставка</a></li>
+  					<li><a href="#">Возврат товара</a></li>
+  					<li><a href="#">Гарантия</a></li>
+  					<li><a href="#">Сертификаты</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer__block">
+  				<div class="footer__block-title">Способы оплаты</div>
+  				<div class="paymentMethods__wrap">
+  					<a href="#" class="paymentMethods__block">
+  						<div class="img_part"><img src="img/icon_cash.png" alt=""></div>
+  						<p>Наличные</p>
+  					</a>
+  					<a href="#" class="paymentMethods__block">
+  						<div class="img_part"><img src="img/icon_cards.png" alt=""></div>
+  						<p>Банковские карты</p>
+  					</a>
+  					<a href="#" class="paymentMethods__block">
+  						<div class="img_part"><img src="img/icon_bank.png" alt=""></div>
+  						<p>Банковский перевод</p>
+  					</a>
+  					<a href="#" class="paymentMethods__block margin">
+  						<img src="img/icon-googlPay.png" alt="">
+  					</a>
+  					<a href="#" class="paymentMethods__block">
+  						<img src="img/icon-applePay.png" alt="">
+  					</a>
+  				</div>
+  			</div>
+  			<div class="footer__block">
+  				<div class="footer__block-title">мы в соцсетях</div>
+  				<div class="social__wrap">
+  					<a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  				</div>
+  				<div class="metric"><img src="img/metric-yandex.png" alt=""></div>
+  				<div class="metric"><img src="img/metric-google.png" alt=""></div>
+  			</div>
+  		</div>
+  		<div class="bottombar">
+  			<div class="container">
+  				<a href="#">Политика конфиденциальности</a>
+  				<a href="#">Использование Cookies</a>
+  				<a href="#">Пользовательское соглашение</a>
+  				<div class="developed-wrap">
+  					<p>Дизайн сайта:</p>
+  					<a href="https://mvacorp.com" target="_blank">MVA Corp</a>
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
+
  </div>
 
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
 	<script src="lib/slick/slick.js"></script>
-	<script src="lib/ddslick-master/jquery.ddslick.min.js"></script>
+	<script src="https://use.fontawesome.com/c324fc071f.js"></script>
 	<script src="script.js"></script>
 </body>
 </html>
