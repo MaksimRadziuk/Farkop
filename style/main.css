@@ -8,12 +8,14 @@
 	padding-top: 80px;
 	padding-bottom: 100px;
 }
-.first_screen .main_title {
+.first_screen span.main_title {
 	text-transform: uppercase;
 	font-size: 38px;
 	font-weight: 700;
+	display: block;
 }
-.first_screen p {
+.first_screen span.secondary_title {
+	display: block;
 	font-size: 32px;
 	margin: 20px 0 50px 0;
 }
@@ -1040,10 +1042,10 @@ a.show__more:hover {
 	.advantages {
 		padding-bottom: 40px
 	}
-	.first_screen .main_title {
+	.first_screen span.main_title {
 		font-size: 24px
 	}
-	.first_screen p {
+	.first_screen span.secondary_title {
 		font-size: 20px;
 		margin-top: 15px;
 		margin-bottom: 35px;

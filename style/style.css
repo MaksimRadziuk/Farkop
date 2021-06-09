@@ -88,7 +88,6 @@ a {
     animation-fill-mode: both;  
     
 }
-
 .popup .close {
 	right: 30px;
 	top: 30px;
@@ -190,6 +189,36 @@ a {
 .content {
 	width: 100%;
 }
+
+.breadcrumbs {
+	width: 100%;
+}
+.breadcrumbs .container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.breadcrumbs a {
+	font-size: 15px;
+	color: #474747;
+}
+.breadcrumbs a:hover {
+	color: var(--green-color);
+}
+.breadcrumbs a:last-child {
+	pointer-events: none;
+	font-size: 15px;
+	color: #848e9d;
+}
+.breadcrumbs__arrow {
+	width: 5px;
+	height: 12px;
+	background-image: url(../img/slider_arrow.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transform: rotateZ(180deg);
+	margin: 0 25px;
+} 
 
 header .container{
 	display: flex;
