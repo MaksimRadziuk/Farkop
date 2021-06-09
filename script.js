@@ -23,19 +23,52 @@ $(document).ready(function(){
 	
 	$('.navbar__search-visible').click(function(){
 		$('.search__popup').toggleClass('active');
+		$('#transparentBackground').fadeIn();
 	})
 	$('.search__popup button').click(function(){
 		$('.search__popup').toggleClass('active');
 	})
 
-	$('.parent_menu').click(function(){
+	$('#transparentBackground').click(function(){
+		$('.search__popup').toggleClass('active');
+		$('#transparentBackground').fadeOut();
+	})
+
+	$('.filter__step-first p').click(function(){
+		$('.filter__wrap-form').addClass('active');
+		let selectCarLabel = $(this).attr('data-value');
+		$('#carLabel option:contains("'+selectCarLabel+'")').prop("selected",true);
+		$('.filter__step-first').removeClass('active');
+		$('.filter__step-second').addClass('active');
+		$('.bottom_part').hide();
+	})
+	$('.filter__step-second p').click(function(){
+		let selectCarModel = $(this).attr('data-value');
+		$('#carModel option:contains("'+selectCarModel+'")').prop("selected",true);
+		$('.filter__step-second').removeClass('active');
+		$('.filter__step-third').addClass('active');
+	})
+	$('.filter__step-third p').click(function(){
+		let selectCarGeneration = $(this).attr('data-value');
+		$('#carGeneration option:contains("'+selectCarGeneration+'")').prop("selected",true);
+		/*$('.filter__step-third').removeClass('active');
+		$('.filter__step-forth').addClass('active');*/
+	})
+	$('.filter__clear-button').click(function(){
+		$('#carGeneration option, #carLabel option, #carModel option').prop("selected",false);
+		$('.filter__step').removeClass('active');
+		$('.filter__step-first').addClass('active');
+		$('.bottom_part').show();
+	})
+
+	/*$('.parent_menu').click(function(){
 		$('.parent_menu>.submenu').toggleClass('active');
 		$('.parent_menu .caret').toggleClass('active');
 	})
 	$('.parent_menu>.submenu>li').click(function(){
 		$('.parent_menu>.submenu').toggleClass('active');
 		$('.parent_menu .caret').toggleClass('active');
-	})
+	})*/
 
 	$('.cookieBar .close').click(function(){
 		$('.cookieBar').hide();
@@ -105,11 +138,15 @@ $(document).ready(function(){
 		$(this).parent('.popup').fadeOut("fast");
 		$('#background').fadeOut("slow");
 	})
+	$('#background').click(function(){
+		$('.popup__order').fadeOut("fast");
+		$('#background').fadeOut("slow");
+	})
 	$('.order__triger').click(function(){
 		$('.popup__order').fadeIn("slow");
 		$('#background').fadeIn("fast");
 	})
 
-	
+	$('input[type="tel"]').mask("+7(999)999-99-99");
 
 });

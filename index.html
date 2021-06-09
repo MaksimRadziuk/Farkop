@@ -35,16 +35,17 @@
  		<div class="popup__title">Оставить заявку</div>
  		<form class="popup__form"> 
  			<input type="text" placeholder="Ваше имя">
- 			<input type="tel" placeholder="Телефон">
+ 			<input type="tel" placeholder="Телефон" required>
  			<button>Отправить</button>
  			<div class="checkbox__wrap">
- 				<input type="checkbox" id="confirmation">
- 				<label for="confirmation">Даю согласие на обработку персональных данных</label>
+ 				<input type="checkbox" id="confirmation" checked>
+ 				<label for="confirmation">Я принимаю <a href="#">Политику конфиденциальности</a> и <a href="#">Пользовательское соглашение</a></label>
  			</div>
  		</form>
  	</div>
 
  	<div class="popup" id="background"></div>
+ 	<div class="popup" id="transparentBackground"></div>
 
   	<header>
 		<div class="topbar">
@@ -71,7 +72,7 @@
 				</div>
 				<div class="info__wrap address_wrap">
 					<p class="address"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Москва, проспект Мира, 186Ас2</p>
-					<p>3 автосервиса</p>
+					<a href="contact.html">3 автосервиса</a>
 					<div class="close">
 			 			<span></span>
 			 			<span></span>
@@ -155,71 +156,185 @@
   		<div class="filter">
   			<div class="container">
   				<div class="filter_wrap">
-  					<div class="title">Выберите модель:</div>
-  					<div class="cars__logo-wrap">
-  						<a href="#" class="cars_sign"><img src="img/logo-audi.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-bmw.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-ford.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-hyundai.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-kia.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-lada.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-mazda.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-mercedes.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-mitsubishi.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-nissan.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-toyota.png" alt=""></a>
-  						<a href="#" class="cars_sign"><img src="img/logo-volkswagen.png" alt=""></a>
+  					<div class="filter__wrap-header">
+  						<div class="title">Выберите модель:</div>
+  						<form class="filter__wrap-form">
+  							<div class="filter__select-wrap">
+  								<select name="carLabel" id="carLabel">
+  									<option value=""></option>
+  									<option value="Audi">Audi</option>
+  									<option value="BMW">BMW</option>
+  									<option value="Ford">Ford</option>
+  									<option value="Hyundai">Hyundai</option>
+  									<option value="Kia">Kia</option>
+  									<option value="Lada">Lada</option>
+  									<option value="Mazda">Mazda</option>
+  									<option value="Mercedes">Mercedes</option>
+  									<option value="Mitsubishi">Mitsubishi</option>
+  									<option value="Nissan">Nissan</option>
+  									<option value="Toyota">Toyota</option>
+  									<option value="Volkswagen">Volkswagen</option>
+  									<option value="Honda">Honda</option>
+  									<option value="Great Wall">Great Wall</option>
+  									<option value="Jeep">Jeep</option>
+  									<option value="Land Rover">Land Rover</option>
+  									<option value="Lexus">Lexus</option>
+  									<option value="Skoda">Skoda</option>
+  									<option value="UAZ">UAZ</option>
+  									<option value="Renault">Renault</option>
+  									<option value="Opel">Opel</option>
+  									<option value="Suzuki">Suzuki</option>
+  									<option value="Chevrolet">Chevrolet</option>
+  									<option value="Chery">Chery</option>
+  								</select>
+  							</div>
+  							<div class="filter__select-wrap">
+  								<select name="carModel" id="carModel">
+  									<option value=""></option>
+  									<option value="Model 1">Model 1</option>
+  									<option value="Model 2">Model 2</option>
+  									<option value="Model 3">Model 3</option>
+  									<option value="Model 4">Model 4</option>
+  									<option value="Model 5">Model 5</option>
+  									<option value="Model 6">Model 6</option>
+  									<option value="Model 7">Model 7</option>
+  									<option value="Model 8">Model 8</option>
+  								</select>
+  							</div>
+  							<div class="filter__select-wrap carGeneration">
+  								<select name="carGeneration" id="carGeneration">
+  									<option value=""></option>
+  									<option value="Фаркопы">Фаркопы</option>
+			  						<option value="Велокрепления на фаркоп">Велокрепления на фаркоп</option>
+			  						<option value="Штатная электрика фаркопа">Штатная электрика фаркопа</option>
+			  						<option value="Боксы на крышу">Боксы на крышу</option>
+			  						<option value="Багажники на фаркоп">Багажники на фаркоп</option>
+			  						<option value="Велокрепления на крышу">Велокрепления на крышу</option>
+			  						<option value="Универсальная электрика фаркопа">Универсальная электрика фаркопа</option>
+			  						<option value="Крепления для лыж">Крепления для лыж</option>
+			  						<option value="Велокрепления на заднюю дверь">Велокрепления на заднюю дверь</option>
+			  						<option value="Парктроники">Парктроники</option>
+			  						<option value="Коврики в салон">Коврики в салон</option>
+			  						<option value="Воздушные отопители">Воздушные отопители</option>
+			  						<option value="Брызговики">Брызговики</option>
+			  						<option value="Коврики в багажник">Коврики в багажник</option>
+			  						<option value="Защиты картера">Защиты картера</option>
+			  						<option value="Вставки под квадрат">Вставки под квадрат</option>
+			  						<option value="Аксессуары и запчасти для фаркопов">Аксессуары и запчасти для фаркопов</option>
+			  						<option value="Видеорегистраторы">Видеорегистраторы</option>
+			  						<option value="Жидкостные отопители">Жидкостные отопители</option>
+			  						<option value="Сетки в бампер">Сетки в бампер</option>
+  								</select>
+  							</div>
+  							<div class="filter__clear-button">
+  								<i class="fa fa-times" aria-hidden="true"></i>
+  								<p>Сбросить все</p>
+  							</div>
+  							<a type="submit" href="catalog.html">В каталог</a>
+  						</form>
   					</div>
-  					<ul>
-  						<li><a href="#">Audi</a></li>
-  						<li><a href="#">Chevrolet</a></li>
-  						<li><a href="#">Chery</a></li>
-  						<li><a href="#">BMW</a></li>
-  						<li><a href="#">Ford</a></li>
-  						<li><a href="#">Hyundai</a></li>
-  						<li><a href="#">Honda</a></li>
-  						<li><a href="#">Great Wall</a></li>
-  						<li><a href="#">Jeep</a></li>
-  						<li><a href="#">Land Rover</a></li>
-  						<li><a href="#">Lada</a></li>
-  						<li><a href="#">Kia</a></li>
-  						<li><a href="#">Lexus</a></li>
-  						<li><a href="#">Mitsubishi</a></li>
-  						<li><a href="#">Mercedes</a></li>
-  						<li><a href="#">Mazda</a></li>
-  						<li><a href="#">Nissan</a></li>
-  						<li><a href="#">Skoda</a></li>
-  						<li><a href="#">Renault</a></li>
-  						<li><a href="#">Opel</a></li>
-  						<li><a href="#">Suzuki</a></li>
-  						<li><a href="#">Volkswagen</a></li>
-  						<li><a href="#">UAZ</a></li>
-  						<li><a href="#">Toyota</a></li>
-  						<li><a href="#">Audi</a></li>
-  						<li><a href="#">Chevrolet</a></li>
-  						<li><a href="#">Chery</a></li>
-  						<li><a href="#">BMW</a></li>
-  						<li><a href="#">Ford</a></li>
-  						<li><a href="#">Hyundai</a></li>
-  						<li><a href="#">Honda</a></li>
-  						<li><a href="#">Great Wall</a></li>
-  						<li><a href="#">Jeep</a></li>
-  						<li><a href="#">Land Rover</a></li>
-  						<li><a href="#">Lada</a></li>
-  						<li><a href="#">Kia</a></li>
-  						<li><a href="#">Lexus</a></li>
-  						<li><a href="#">Mitsubishi</a></li>
-  						<li><a href="#">Mercedes</a></li>
-  						<li><a href="#">Mazda</a></li>
-  						<li><a href="#">Nissan</a></li>
-  						<li><a href="#">Skoda</a></li>
-  						<li><a href="#">Renault</a></li>
-  						<li><a href="#">Opel</a></li>
-  						<li><a href="#">Suzuki</a></li>
-  						<li><a href="#">Volkswagen</a></li>
-  						<li><a href="#">UAZ</a></li>
-  						<li><a href="#">Toyota</a></li>
-  					</ul>
+  					<div class="filter__step filter__step-first active">
+  						<div class="cars__logo-wrap">
+	  						<p  data-value='Audi' class="cars_sign"><img src="img/logo-audi.png" alt=""></p>
+	  						<p  data-value='BMW' class="cars_sign"><img src="img/logo-bmw.png" alt=""></p>
+	  						<p  data-value='Ford' class="cars_sign"><img src="img/logo-ford.png" alt=""></p>
+	  						<p  data-value='Hyundai' class="cars_sign"><img src="img/logo-hyundai.png" alt=""></p>
+	  						<p  data-value='Kia' class="cars_sign"><img src="img/logo-kia.png" alt=""></p>
+	  						<p  data-value='Lada' class="cars_sign"><img src="img/logo-lada.png" alt=""></p>
+	  						<p  data-value='Mazda' class="cars_sign"><img src="img/logo-mazda.png" alt=""></p>
+	  						<p  data-value='Mercedes' class="cars_sign"><img src="img/logo-mercedes.png" alt=""></p>
+	  						<p  data-value='Mitsubishi' class="cars_sign"><img src="img/logo-mitsubishi.png" alt=""></p>
+	  						<p  data-value='Nissan' class="cars_sign"><img src="img/logo-nissan.png" alt=""></p>
+	  						<p  data-value='Toyota' class="cars_sign"><img src="img/logo-toyota.png" alt=""></p>
+	  						<p  data-value='Volkswagen' class="cars_sign"><img src="img/logo-volkswagen.png" alt=""></p>
+	  					</div>
+	  					<ul>
+	  						<li><p data-value='Audi'>Audi</p></li>
+	  						<li><p data-value='Chevrolet'>Chevrolet</p></li>
+	  						<li><p data-value='Chery'>Chery</p></li>
+	  						<li><p data-value='BMW'>BMW</p></li>
+	  						<li><p data-value='Ford'>Ford</p></li>
+	  						<li><p data-value='Hyundai'>Hyundai</p></li>
+	  						<li><p data-value='Honda'>Honda</p></li>
+	  						<li><p data-value='Great Wall'>Great Wall</p></li>
+	  						<li><p data-value='Jeep'>Jeep</p></li>
+	  						<li><p data-value='Land Rover'>Land Rover</p></li>
+	  						<li><p data-value='Lada'>Lada</p></li>
+	  						<li><p data-value='Kia'>Kia</p></li>
+	  						<li><p data-value='Lexus'>Lexus</p></li>
+	  						<li><p data-value='Mitsubishi'>Mitsubishi</p></li>
+	  						<li><p data-value='Mercedes'>Mercedes</p></li>
+	  						<li><p data-value='Mazda'>Mazda</p></li>
+	  						<li><p data-value='Nissan'>Nissan</p></li>
+	  						<li><p data-value='Skoda'>Skoda</p></li>
+	  						<li><p data-value='Renault'>Renault</p></li>
+	  						<li><p data-value='Opel'>Opel</p></li>
+	  						<li><p data-value='Suzuki'>Suzuki</p></li>
+	  						<li><p data-value='Volkswagen'>Volkswagen</p></li>
+	  						<li><p data-value='UAZ'>UAZ</p></li>
+	  						<li><p data-value='Toyota'>Toyota</p></li>
+	  						<li><p data-value='Audi'>Audi</p></li>
+	  						<li><p data-value='Chevrolet'>Chevrolet</p></li>
+	  						<li><p data-value='Chery'>Chery</p></li>
+	  						<li><p data-value='BMW'>BMW</p></li>
+	  						<li><p data-value='Ford'>Ford</p></li>
+	  						<li><p data-value='Hyundai'>Hyundai</p></li>
+	  						<li><p data-value='Honda'>Honda</p></li>
+	  						<li><p data-value='Great Wall'>Great Wall</p></li>
+	  						<li><p data-value='Jeep'>Jeep</p></li>
+	  						<li><p data-value='Land Rover'>Land Rover</p></li>
+	  						<li><p data-value='Lada'>Lada</p></li>
+	  						<li><p data-value='Kia'>Kia</p></li>
+	  						<li><p data-value='Lexus'>Lexus</p></li>
+	  						<li><p data-value='Mitsubishi'>Mitsubishi</p></li>
+	  						<li><p data-value='Mercedes'>Mercedes</p></li>
+	  						<li><p data-value='Mazda'>Mazda</p></li>
+	  						<li><p data-value='Nissan'>Nissan</p></li>
+	  						<li><p data-value='Skoda'>Skoda</p></li>
+	  						<li><p data-value='Renault'>Renault</p></li>
+	  						<li><p data-value='Opel'>Opel</p></li>
+	  						<li><p data-value='Suzuki'>Suzuki</p></li>
+	  						<li><p data-value='Volkswagen'>Volkswagen</p></li>
+	  						<li><p data-value='UAZ'>UAZ</p></li>
+	  						<li><p data-value='Toyota'>Toyota</p></li>
+	  					</ul>
+  					</div>
+  					<div class="filter__step filter__step-second ">
+  						<ul>
+	  						<li><p data-value='Model 1'>Model 1</p></li>
+	  						<li><p data-value='Model 2'>Model 2</p></li>
+	  						<li><p data-value='Model 3'>Model 3</p></li>
+	  						<li><p data-value='Model 4'>Model 4</p></li>
+	  						<li><p data-value='Model 5'>Model 5</p></li>
+	  						<li><p data-value='Model 6'>Model 6</p></li>
+	  						<li><p data-value='Model 7'>Model 7</p></li>
+	  						<li><p data-value='Model 8'>Model 8</p></li>
+	  					</ul>
+  					</div>
+  					<div class="filter__step filter__step-third">
+  						<ul>
+	  						<li><p data-value="Фаркопы">Фаркопы</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Велокрепления на фаркоп">Велокрепления на фаркоп</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Штатная электрика фаркопа">Штатная электрика фаркопа</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Боксы на крышу">Боксы на крышу</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Багажники на фаркоп">Багажники на фаркоп</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Велокрепления на крышу">Велокрепления на крышу</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Универсальная электрика фаркопа">Универсальная электрика фаркопа</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Крепления для лыж">Крепления для лыж</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Велокрепления на заднюю дверь">Велокрепления на заднюю дверь</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Парктроники">Парктроники</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Коврики в салон">Коврики в салон</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Воздушные отопители">Воздушные отопители</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Брызговики">Брызговики</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Коврики в багажник">Коврики в багажник</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Защиты картера">Защиты картера</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Вставки под квадрат">Вставки под квадрат</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Аксессуары и запчасти для фаркопов">Аксессуары и запчасти для фаркопов</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Видеорегистраторы">Видеорегистраторы</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Жидкостные отопители">Жидкостные отопители</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Сетки в бампер">Сетки в бампер</p><span class="filter__goods-amount">12</span></li>
+	  					</ul>
+  					</div>
   				</div>
   			</div>
   			<div class="bottom_part">Показать все марки<i class="fa fa-caret-down" aria-hidden="true"></i></div>
@@ -710,8 +825,8 @@
 				<div class="news__wrap">
 					<div class="news__block">
 						<div class="news__block-img">
-							<img src="img/news-1.png" alt="">
-							<div class="news__block-mark article">статья</div>
+							<a href="article.html"><img src="img/news-1.png" alt=""></a>
+							<a href="article.html" class="news__block-mark article">статья</a>
 						</div>
 						<div class="news__block-date">05.05.2021</div>
 						<div class="news__block-title">Новая формула расчета стоимости бензина</div>
@@ -719,8 +834,8 @@
 					</div>
 					<div class="news__block">
 						<div class="news__block-img">
-							<img src="img/news-2.png" alt="">
-							<div class="news__block-mark portfolio">портфолио</div>
+							<a href="article.html"><img src="img/news-2.png" alt=""></a>
+							<a href="portfolio.html" class="news__block-mark portfolio">портфолио</a>
 						</div>
 						<div class="news__block-date">05.05.2021</div>
 						<div class="news__block-title">Новая формула расчета стоимости бензина</div>
@@ -728,8 +843,8 @@
 					</div>
 					<div class="news__block">
 						<div class="news__block-img">
-							<img src="img/news-3.png" alt="">
-							<div class="news__block-mark news__mark">новость</div>
+							<a href="article.html"><img src="img/news-3.png" alt=""></a>
+							<a href="news.html" class="news__block-mark news__mark">новость</a>
 						</div>
 						<div class="news__block-date">05.05.2021</div>
 						<div class="news__block-title">Новая формула расчета стоимости бензина</div>
@@ -737,8 +852,8 @@
 					</div>
 					<div class="news__block">
 						<div class="news__block-img">
-							<img src="img/news-4.png" alt="">
-							<div class="news__block-mark portfolio">портфолио</div>
+							<a href="article.html"><img src="img/news-4.png" alt=""></a>
+							<a href="portfolio.html" class="news__block-mark portfolio">портфолио</a>
 						</div>
 						<div class="news__block-date">05.05.2021</div>
 						<div class="news__block-title">Новая формула расчета стоимости бензина</div>
@@ -791,24 +906,24 @@
   			<div class="footer__block">
   				<div class="footer__block-title">Способы оплаты</div>
   				<div class="paymentMethods__wrap">
-  					<a href="#" class="paymentMethods__block">
+  					<div class="paymentMethods__block">
   						<div class="img_part"><img src="img/icon_cash.png" alt=""></div>
   						<p>Наличные</p>
-  					</a>
-  					<a href="#" class="paymentMethods__block">
+  					</div>
+  					<div class="paymentMethods__block">
   						<div class="img_part"><img src="img/icon_cards.png" alt=""></div>
   						<p>Банковские карты</p>
-  					</a>
-  					<a href="#" class="paymentMethods__block">
+  					</div>
+  					<div class="paymentMethods__block">
   						<div class="img_part"><img src="img/icon_bank.png" alt=""></div>
   						<p>Банковский перевод</p>
-  					</a>
-  					<a href="#" class="paymentMethods__block margin">
+  					</div>
+  					<div class="paymentMethods__block margin">
   						<img src="img/icon-googlPay.png" alt="">
-  					</a>
-  					<a href="#" class="paymentMethods__block">
+  					</div>
+  					<div class="paymentMethods__block">
   						<img src="img/icon-applePay.png" alt="">
-  					</a>
+  					</div>
   				</div>
   			</div>
   			<div class="footer__block">
@@ -821,8 +936,8 @@
   					<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
   					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
   				</div>
-  				<div class="metric"><img src="img/metric-yandex.png" alt=""></div>
-  				<div class="metric"><img src="img/metric-google.png" alt=""></div>
+  				<a href="#" class="metric"><img src="img/metric-yandex.png" alt=""></a>
+  				<a href="#" class="metric"><img src="img/metric-google.png" alt=""></a>
   			</div>
   		</div>
   		<div class="bottombar">
@@ -832,7 +947,7 @@
   				<a href="#">Пользовательское соглашение</a>
   				<div class="developed-wrap">
   					<p>Дизайн сайта:</p>
-  					<a href="https://mvacorp.com" target="_blank">MVA Corp</a>
+  					<a href="https://mvacorp.com" target="_blank">MVACorp</a>
   				</div>
   			</div>
   		</div>
@@ -845,6 +960,7 @@
   crossorigin="anonymous"></script>
 	<script src="lib/slick/slick.js"></script>
 	<script src="https://use.fontawesome.com/c324fc071f.js"></script>
+	<script src="lib/jquery.maskedinput/jquery.maskedinput.js"></script>
 	<script src="script.js"></script>
 </body>
 </html>
