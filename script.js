@@ -149,4 +149,15 @@ $(document).ready(function(){
 
 	$('input[type="tel"]').mask("+7(999)999-99-99");
 
+	$('.filter__display.tiles').click(function(){
+		$(this).addClass("active");
+		$('.filter__display.rows').removeClass("active");
+		$('.catalog__result-tiles').removeClass('rows').addClass('tiles');
+	})
+	$('.filter__display.rows').click(function(){
+		$(this).addClass("active");
+		$('.filter__display.tiles').removeClass("active");
+		$('.catalog__result-tiles').removeClass('tiles').addClass('rows');
+	})
+
 });

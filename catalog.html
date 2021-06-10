@@ -259,11 +259,743 @@
   							<label for="negative">Нет</label>
   						</div>
   					</div>
+  					<div class="catalog__sidebar-divider"></div>
+  					<div class="catalog__sidebar-block">
+  						<div class="catalog__sidebar-title">Цвет</div>
+  						<div class="sidebar__checkbox-wrap sidebar__checkbox-color">
+  							<div><input type="radio" name="color" id="whiteColor" checked>
+  							<label for="whiteColor"></label></div>
+  							<div><input type="radio" name="color" id="blackColor" >
+  							<label for="blackColor"></label></div>
+  							<div><input type="radio" name="color" id="blueColor" >
+  							<label for="blueColor"></label></div>
+  							<div><input type="radio" name="color" id="orangeColor" >
+  							<label for="orangeColor"></label></div>
+  							<div><input type="radio" name="color" id="redColor" >
+  							<label for="redColor"></label></div>
+  							<div><input type="radio" name="color" id="greenColor" >
+  							<label for="greenColor"></label></div>
+  							<div><input type="radio" name="color" id="purpleColor" >
+  							<label for="purpleColor"></label></div>
+  							<div><input type="radio" name="color" id="greyColor" >
+  							<label for="greyColor"></label></div>
+  						</div>
+  					</div>
+  					<div class="catalog__sidebar-divider"></div>
+  					<div class="catalog__sidebar-block">
+  						<div class="catalog__sidebar-title">Цена, руб</div>
+  						<div class="sidebar__checkbox-wrap price">
+  							<p>От</p>
+  							<input type="text" id="priceMin">
+  							<p>до</p>
+  							<input type="text" id="priceMax">
+  						</div>
+  						<div class="sidebar__checkbox-wrap sidebar__checkbox-dots">
+  							<div class="price__track"></div>
+  							<div class="price__dot price__dot-min"><span>1 000</span></div>
+  							<div class="price__dot price__dot-max"><span>100 000</span></div>
+  							<div class="price__track-green"></div>
+  						</div>
+  					</div>
+  					<div class="catalog__sidebar-divider"></div>
+  					<div class="catalog__sidebar-block clear__wrap">
+  						<a href="#">Еще</a>
+	  					<div class="sidebar__clear-button">
+							<i class="fa fa-times" aria-hidden="true"></i>
+							<p>Сбросить все</p>
+						</div>
+  					</div>
+  					<div class="catalog__sidebar-block padding__right">
+  						<button>Показать</button>
+  					</div>
+  					<div class="catalog__sidebar-block padding__right padding__top">
+  						<div class="catalog__sidebar-banner">баннер</div>
+  					</div>
 	  			</div>
 	  			<div class="catalog__result-wrap">
-	  				
+	  				<div class="catalog__filter-wrap">
+	  					<div class="filter__total-wrap">
+	  						<p>Найдено:</p>
+	  						<p class="total__found">545</p>
+	  						<p>товаров</p>
+	  					</div>
+	  					<div class="filter__sort-wrap">
+	  						<p>Сортировать по:</p>
+	  						<div class="filter__select-wrap sorting">
+	  							<select name="sortBy" id="sortBy">
+	  								<option value="">Популярности</option>
+	  								<option value="">Сначала дешевые</option>
+	  								<option value="">Сначала дорогие</option>
+	  								<option value="">Новые</option>
+	  							</select>
+	  						</div>
+	  					</div>
+	  					<div class="filter__sort-wrap">
+	  						<p>Показывать по:</p>
+	  						<div class="filter__select-wrap visibility">
+	  							<select name="sortBy" id="sortBy">
+	  								<option value="">25</option>
+	  								<option value="">50</option>
+	  								<option value="">100</option>
+	  							</select>
+	  						</div>
+	  					</div>
+  						<div class="filter__display-wrap">
+  							<div class="filter__display tiles "><i class="fa fa-th-large" aria-hidden="true"></i></div>
+  							<div class="filter__display rows active"><i class="fa fa-list-ul" aria-hidden="true"></i></div>
+  						</div>
+	  				</div>
+	  				<div class="catalog__result-tiles rows">
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+						<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  					<div class="popular__block">
+							<div class="popular__block-imgWrap">
+								<img src="img/popular_goods.png" alt="">
+							</div>
+							<div class="popular__block-textWrap">
+								<div class="popular__block-price">
+									<span>15 000</span>
+									<span>&#8381;</span>
+								</div>
+								<div class="popular__block-type">Видеорегистратор</div>
+								<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+								<div class="popular__block-article">
+									<span>Артикул:</span>
+									<span>45287452</span>
+								</div>
+								<div class="popular__block-availiability">
+									<span>В наличии: </span>
+									<span>5 264 шт.</span>
+								</div>
+								<p class="popular__block-description">
+									Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню
+								</p>
+								<button class="buy order__triger">Купить</button>
+							</div>
+						</div>
+	  				</div>
 	  			</div>
 	  		</div>
+	  		<div class="pagination__wrap">
+	  			<div class="pagination__block">
+	  				<div class="pagination__item"></div>
+	  				<div class="pagination__item">1</div>
+	  				<div class="pagination__item active">2</div>
+	  				<div class="pagination__item">3</div>
+	  				<div class="pagination__item">4</div>
+	  				<div class="pagination__item">5</div>
+	  				<div class="pagination__item"></div>
+	  			</div>
+	  		</div>
+  		</div>
+  		<div class="catalog__ceo-block">
+  			<div class="container">
+  				<h2>условия безопасности</h2>
+  				<article>
+  					<p>Условия безопасности для фаркопов весьма логичны и просты. Такого рода устройства должно быть изготовлены только в заводских условиях, там же и испытаны.</p>
+	  				<p>К фаркопу выдается сертификат с синей печатью, а еще один сертификат должен выдать установщик после монтажа фаркопа на автомобиль. Сертификат может быть копией оригинала, но обязательно заверенный синей печатью</p>
+	  				<p>Условия безопасности для фаркопов весьма логичны и просты. Такого рода устройства должно быть изготовлены только в заводских условиях, там же и испытаны. К фаркопу выдается сертификат с синей печатью, а еще один сертификат должен выдать установщик после монтажа фаркопа на автомобиль.</p>
+	  				<p>Сертификат может быть копией оригинала, но обязательно заверенный синей печатью</p>
+  				</article>
+  			</div>
   		</div>
   	</div>
 
