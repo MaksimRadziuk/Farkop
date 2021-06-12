@@ -30,7 +30,8 @@ $(document).ready(function(){
 	})
 
 	$('#transparentBackground').click(function(){
-		$('.search__popup').toggleClass('active');
+		$('.search__popup').removeClass('active');
+		$('.quick__review').fadeOut('fast');
 		$('#transparentBackground').fadeOut();
 	})
 
@@ -133,6 +134,7 @@ $(document).ready(function(){
 	})
 	$('#background').click(function(){
 		$('.popup__order').fadeOut("fast");
+		$('.confirmation').fadeOut("fast");
 		$('#background').fadeOut("slow");
 	})
 	$('.order__triger').click(function(){
@@ -189,6 +191,13 @@ $(document).ready(function(){
 		else{}
 	})
 
+	$('.delete__row-button').click(function(){
+		$(this).parent('.basket__table-row, .quick__review-row').remove();
+	})
 
+	$('.basket__wrap').click(function(){
+		$('#transparentBackground').fadeIn("slow");
+		$('.quick__review').fadeIn("fast");
+	})
 
 });
