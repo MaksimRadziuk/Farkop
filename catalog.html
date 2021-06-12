@@ -44,6 +44,68 @@
  		</form>
  	</div>
 
+ 	<div class="popup preview">
+		<div class="close"><span></span><span></span></div>
+ 		<div class="preview__mainInfo">
+ 			<div class="preview__imgWrap">
+ 				<img src="img/popular_goods.png" alt="">
+ 			</div>
+ 			<div class="preview__infoWrap">
+				<div class="popular__block-type">Видеорегистратор</div>
+				<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+				<div class="popular__block-article">
+					<span>Артикул:</span>
+					<span>45287452</span>
+				</div>
+				<div class="wrapper">
+					<div class="popular__block-availiability">
+						<span>В наличии: </span>
+						<span>5 264 шт.</span>
+					</div>
+					<a href="article.html">Подробнее</a>
+				</div>
+ 				<div class="popular__block-price">
+					<span>15 000</span>
+					<span>&#8381;</span>
+				</div>
+				<button class="buy order__triger">Купить</button>
+ 			</div>
+ 		</div>
+		<div class="preview__tabsWrap">
+			<div class="preview__tabs-triggers">
+				<div class="tab__trigger tab__trigger-description ">Описание</div>
+				<div class="tab__trigger tab__trigger-characteristics active">Характристики</div>
+			</div>
+			<div class="tab__content preview__description ">
+				<p>Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню.</p>
+				<p>Задняя камера пишет видео в обычном режиме, при включении задней передачи может использоваться как камера заднего хода.</p>
+				<p>Циклическая запись, штамп даты и времени, просмотр записанных файлов, ночная съемка благодаря чувствительной матрице и функции HDR</p>
+			</div>
+			<div class="tab__content preview__characteristics active">
+				<div class="preview__characteristics-row">
+					<div class="title">Дисплей:</div>
+					<div class="readig">4 дюйма IPS 800*480</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Камера:</div>
+					<div class="readig">1/4" CMOS, High-Definition (HD) 5МП</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Угол обзора основной камеры:</div>
+					<div class="readig">170°</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Угол обзора задней камеры:</div>
+					<div class="readig">120°</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Угол обзора салонной камеры:</div>
+					<div class="readig">120°</div>
+				</div>
+			</div>
+		</div>
+ 	</div>
+
  	<div class="popup" id="background"></div>
  	<div class="popup" id="transparentBackground"></div>
 
@@ -159,8 +221,9 @@
   			<h1>каталог продукции</h1>
   			<div class="catalog__wrap">
 	  			<div class="catalog__sidebar">
+	  				<div class="close"><span></span><span></span></div>
   					<div class="catalog__sidebar-block">
-  						<div class="catalog__sidebar-title">Выберите авто</div>
+  						<div class="catalog__sidebar-title first">Выберите авто</div>
   						<div class="sidebar__select-wrap">
 							<select name="carLabel" id="carLabel">
 								<option value=""></option>
@@ -312,6 +375,12 @@
   						<div class="catalog__sidebar-banner">баннер</div>
   					</div>
 	  			</div>
+	  			<div class="mobile__filter-wrap">
+	  				<div class="mobile__filter-title">
+	  					<i class="fa fa-sliders" aria-hidden="true"></i>
+	  					Фильтры
+	  				</div>
+	  			</div>
 	  			<div class="catalog__result-wrap">
 	  				<div class="catalog__filter-wrap">
 	  					<div class="filter__total-wrap">
@@ -319,7 +388,7 @@
 	  						<p class="total__found">545</p>
 	  						<p>товаров</p>
 	  					</div>
-	  					<div class="filter__sort-wrap">
+	  					<div class="filter__sort-wrap sorting">
 	  						<p>Сортировать по:</p>
 	  						<div class="filter__select-wrap sorting">
 	  							<select name="sortBy" id="sortBy">
@@ -330,7 +399,7 @@
 	  							</select>
 	  						</div>
 	  					</div>
-	  					<div class="filter__sort-wrap">
+	  					<div class="filter__sort-wrap amount">
 	  						<p>Показывать по:</p>
 	  						<div class="filter__select-wrap visibility">
 	  							<select name="sortBy" id="sortBy">
@@ -974,6 +1043,9 @@
 						</div>
 	  				</div>
 	  			</div>
+	  		</div>
+	  		<div class="mobile__button-wrap">
+	  			<button class="show__more">Открыть еще</button>
 	  		</div>
 	  		<div class="pagination__wrap">
 	  			<div class="pagination__block">

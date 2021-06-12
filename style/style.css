@@ -86,7 +86,6 @@ a {
 	display: none;
 	animation-duration: 0.55s;  
     animation-fill-mode: both;  
-    
 }
 .popup .close {
 	right: 30px;
@@ -100,7 +99,8 @@ a {
 	left: 50%;
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
-	animation-name: fadeInDown;
+    animation-name: fadeInDown;
+	
 }
 @keyframes fadeInDown {
     0% {                
@@ -877,6 +877,7 @@ footer .metric img {
 	header .navbar .submenu li {
 		min-height: auto;
 		padding: 5px;
+		align-items: flex-start;
 	}
 	header .navbar .submenu li>a {
 		padding-left: 20px;
@@ -891,6 +892,8 @@ footer .metric img {
 		width: 100%;
 		margin-right: 0;
 		padding: 12px 0;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 	header .navbar ul>li>a {
 		padding-left: 10px;
