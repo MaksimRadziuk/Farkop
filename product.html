@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Farkop-auto</title>
+
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="lib/slick/slick-theme.css">
+	<link rel="stylesheet" href="lib/slick/slick.css">
+	<link rel="stylesheet" href="lib/ResponsiveImageGallery/css/style.css">
+	<link rel="stylesheet" href="lib/ResponsiveImageGallery/css/elastislide.css">
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/product.css">
+</head>
+<body>
+
+ <div class="wrap">
+ 	<div class="up"><img src="img/button-up.png" alt="go up"></div>
+
+ 	<div class="cookieBar">
+ 		<div class="container">
+ 			<div class="close">
+	 			<span></span>
+	 			<span></span>
+	 		</div>
+	 		<p>Этот сайт использует cookie для хранения данных. Продолжая использовать сайт, вы даете согласие на работу с этими файлами</p>
+	 		<button>Принять и закрыть</button>
+ 		</div>
+ 	</div>
+
+ 	<div class="popup popup__order">
+ 		<div class="close">
+ 			<span></span>
+ 			<span></span>
+ 		</div>
+ 		<div class="popup__title">Оставить заявку</div>
+ 		<form class="popup__form"> 
+ 			<input type="text" placeholder="Ваше имя">
+ 			<input type="tel" placeholder="Телефон" required>
+ 			<button>Отправить</button>
+ 			<div class="checkbox__wrap">
+ 				<input type="checkbox" id="confirmation" checked>
+ 				<label for="confirmation">Я принимаю <a href="#">Политику конфиденциальности</a> и <a href="#">Пользовательское соглашение</a></label>
+ 			</div>
+ 		</form>
+ 	</div>
+
+ 	<div class="popup preview">
+		<div class="close"><span></span><span></span></div>
+ 		<div class="preview__mainInfo">
+ 			<div class="preview__imgWrap">
+ 				<img src="img/popular_goods.png" alt="">
+ 			</div>
+ 			<div class="preview__infoWrap">
+				<div class="popular__block-type">Видеорегистратор</div>
+				<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+				<div class="popular__block-article">
+					<span>Артикул:</span>
+					<span>45287452</span>
+				</div>
+				<div class="wrapper">
+					<div class="popular__block-availiability">
+						<span>В наличии: </span>
+						<span>5 264 шт.</span>
+					</div>
+					<a href="article.html">Подробнее</a>
+				</div>
+ 				<div class="popular__block-price">
+					<span>15 000</span>
+					<span>&#8381;</span>
+				</div>
+				<button class="buy order__triger">Купить</button>
+ 			</div>
+ 		</div>
+		<div class="preview__tabsWrap">
+			<div class="preview__tabs-triggers">
+				<div class="tab__trigger tab__trigger-description ">Описание</div>
+				<div class="tab__trigger tab__trigger-characteristics active">Характристики</div>
+			</div>
+			<div class="tab__content preview__description ">
+				<p>Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню.</p>
+				<p>Задняя камера пишет видео в обычном режиме, при включении задней передачи может использоваться как камера заднего хода.</p>
+				<p>Циклическая запись, штамп даты и времени, просмотр записанных файлов, ночная съемка благодаря чувствительной матрице и функции HDR</p>
+			</div>
+			<div class="tab__content preview__characteristics active">
+				<div class="preview__characteristics-row">
+					<div class="title">Дисплей:</div>
+					<div class="readig">4 дюйма IPS 800*480</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Камера:</div>
+					<div class="readig">1/4" CMOS, High-Definition (HD) 5МП</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Угол обзора основной камеры:</div>
+					<div class="readig">170°</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Угол обзора задней камеры:</div>
+					<div class="readig">120°</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Угол обзора салонной камеры:</div>
+					<div class="readig">120°</div>
+				</div>
+			</div>
+		</div>
+ 	</div>
+
+ 	<div class="popup confirmation">
+ 		<div class="confirmation__text">Вы уверены, что хотите удалить этот товар из корзины?</div>
+ 		<div class="buttons__wrap">
+ 			<div class="confirmation__button" id="deleteRowConfirm">Да</div>
+ 			<div class="confirmation__button" id="deleteRowCancel">Нет</div>
+ 		</div>
+ 	</div>
+
+ 	<div class="popup" id="background"></div>
+ 	<div class="popup" id="transparentBackground"></div>
+
+  	<header>
+		<div class="topbar">
+			<div class="container">
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="logo__wrap">
+					<a href="index.html"><img src="img/logo-dark.png" alt="Farkop-auto logo"></a>
+				</div>
+				<div class="mobile__triggers">
+					<div class="phone__trigger"><i class="fa fa-phone" aria-hidden="true"></i></div>
+					<div class="address__trigger"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+				</div>
+				<div class="info__wrap phone_wrap">
+					<a href="tel:74959759408"><span><i class="fa fa-phone" aria-hidden="true"></i></span>+7 (495) 975 94 08</a>
+					<p>10:00 - 20:00 Пн - Вс</p>
+					<div class="close">
+			 			<span></span>
+			 			<span></span>
+			 		</div>
+				</div>
+				<div class="info__wrap address_wrap">
+					<p class="address"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Москва, проспект Мира, 186Ас2</p>
+					<a href="contact.html">3 автосервиса</a>
+					<div class="close">
+			 			<span></span>
+			 			<span></span>
+			 		</div>
+				</div>
+				<div class="social__wrap">
+					<a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				</div>
+				<div class="basket__wrap">
+					<div class="popup quick__review">
+				 		<div class="quick__review-row">
+				 			<div class="delete__row-button"><span></span><span></span></div>
+				 			<div class="image__wrap">
+				 				<img src="img/popular_goods.png" alt="">
+				 			</div>
+				 			<div class="text__wrap">
+				 				<div class="goods__type">Видеорегистратор</div>
+								<div class="goods__name">SilverStone F1 NTK-9000F</div>
+								<div class="quick__review-price">
+									15 000 &#8381;
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="quick__review-row">
+				 			<div class="delete__row-button"><span></span><span></span></div>
+				 			<div class="image__wrap">
+				 				<img src="img/popular_goods.png" alt="">
+				 			</div>
+				 			<div class="text__wrap">
+				 				<div class="goods__type">Видеорегистратор</div>
+								<div class="goods__name">SilverStone F1 NTK-9000F</div>
+								<div class="quick__review-price">
+									15 000 &#8381;
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="quick__review-row">
+				 			<div class="delete__row-button"><span></span><span></span></div>
+				 			<div class="image__wrap">
+				 				<img src="img/popular_goods.png" alt="">
+				 			</div>
+				 			<div class="text__wrap">
+				 				<div class="goods__type">Видеорегистратор</div>
+								<div class="goods__name">SilverStone F1 NTK-9000F</div>
+								<div class="quick__review-price">
+									15 000 &#8381;
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="quick__review-row">
+				 			<div class="delete__row-button"><span></span><span></span></div>
+				 			<div class="image__wrap">
+				 				<img src="img/popular_goods.png" alt="">
+				 			</div>
+				 			<div class="text__wrap">
+				 				<div class="goods__type">Видеорегистратор</div>
+								<div class="goods__name">SilverStone F1 NTK-9000F</div>
+								<div class="quick__review-price">
+									15 000 &#8381;
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="quick__review-summary">
+				 			<div class="summary__wrap">
+								<div class="goods__summary">Итого</div>
+								<div class="price__summary">58 110 &#8381;</div>
+							</div>
+							<a href="order.html">Оформить заказ</a>
+				 		</div>
+				 	</div>
+					<div class="basket__wrap-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+					<div class="basket__wrap-amount">5</div>
+					<div class="basket__wrap-text">товаров</div>
+				</div>
+			</div>
+		</div>
+		<div class="navbar">
+			<div class="container">
+				<ul>
+					<li class="parent_menu">
+						<a href="catalog.html">Каталог</a><div class="caret"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+						<div class="submenu">
+							<ul>
+								<li><a href="catalog.html">Фаркопы</a></li>
+								<li><a href="catalog.html">Электрика и аксессуары для фаркопов</a></li>
+								<li><a href="catalog.html">Боксы на крышу</a></li>
+								<li><a href="catalog.html">Велобагажники</a></li>
+								<li><a href="catalog.html">Крепления для лыж</a></li>
+								<li><a href="catalog.html">Защиты картера</a></li>
+								<li><a href="catalog.html">Рейлинги и багажники</a></li>
+								<li><a href="catalog.html">Парктроники</a></li>
+								<li><a href="catalog.html">Велобагажники</a></li>
+								<li><a href="catalog.html">Крепления для лыж</a></li>
+								<li><a href="catalog.html">Защиты картера</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="service.html">Услуги и цены</a></li>
+					<li><a href="portfolio.html">Портфолио</a></li>
+					<li><a href="faq.html">Вопрос-Ответ</a></li>
+					<li><a href="feedback.html">Отзывы</a></li>
+					<li><a href="about.html">О нас</a></li>
+					<li><a href="news.html">Новости и статьи</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+		 			<div class="close">
+			 			<span></span>
+			 			<span></span>
+			 		</div>
+				</ul>
+				<div class="navbar__search">
+					<div class="navbar__search-visible">
+						<img src="img/icon-search.png" alt="search">
+						<p>Поиск</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search__popup">
+			<form class="search__popup-wrap">
+				<img src="img/icon-search.png" alt="search image">
+				<input type="text" placeholder="Я ищу...">
+				<button type="submit">Поиск</button>
+				<div class="close">
+		 			<span></span>
+		 			<span></span>
+		 		</div>
+			</form>
+		</div>
+  	</header>
+
+  	<div class="content">
+  		<div class="breadcrumbs">
+  			<div class="container">
+  				<a href="index.html">Главная</a>
+  				<div class="breadcrumbs__arrow"></div>
+  				<a href="category.html">Видеорегистраторы</a>
+  				<div class="breadcrumbs__arrow"></div>
+  				<a href="product.html">SilverStone F1 NTK-9000F</a>
+  			</div>
+  		</div>
+  		<div class="container">
+  			<div class="product__mainInfo-wrap">
+  				<div class="product__gallery-wrap">
+  					<div id="rg-gallery" class="rg-gallery">
+						<div class="rg-thumbs">
+							<!-- Elastislide Carousel Thumbnail Viewer -->
+							<div class="es-carousel-wrapper">
+								<div class="es-nav">
+									<span class="es-nav-prev">Previous</span>
+									<span class="es-nav-next">Next</span>
+								</div>
+								<div class="es-carousel">
+									<ul>
+										<li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
+										<li><a href="#"><img src="images/thumbs/2.jpg" data-large="images/2.jpg" alt="image02" data-description="A plaintful story from a sistering vale" /></a></li>
+										<li><a href="#"><img src="images/thumbs/3.jpg" data-large="images/3.jpg" alt="image03" data-description="A plaintful story from a sistering vale" /></a></li>
+										<li><a href="#"><img src="images/thumbs/4.jpg" data-large="images/4.jpg" alt="image04" data-description="My spirits to attend this double voice accorded" /></a></li>
+										<li><a href="#"><img src="images/thumbs/5.jpg" data-large="images/5.jpg" alt="image05" data-description="And down I laid to list the sad-tuned tale" /></a></li>
+										<li><a href="#"><img src="images/thumbs/6.jpg" data-large="images/6.jpg" alt="image06" data-description="Ere long espied a fickle maid full pale" /></a></li>
+										<li><a href="#"><img src="images/thumbs/7.jpg" data-large="images/7.jpg" alt="image07" data-description="Tearing of papers, breaking rings a-twain" /></a></li>
+										<li><a href="#"><img src="images/thumbs/8.jpg" data-large="images/8.jpg" alt="image08" data-description="Storming her world with sorrow's wind and rain" /></a></li>
+										<li><a href="#"><img src="images/thumbs/9.jpg" data-large="images/9.jpg" alt="image09" data-description="Upon her head a platted hive of straw" /></a></li>
+										<li><a href="#"><img src="images/thumbs/10.jpg" data-large="images/10.jpg" alt="image10" data-description="Which fortified her visage from the sun" /></a></li>
+										<li><a href="#"><img src="images/thumbs/11.jpg" data-large="images/11.jpg" alt="image11" data-description="Whereon the thought might think sometime it saw" /></a></li>
+										<li><a href="#"><img src="images/thumbs/12.jpg" data-large="images/12.jpg" alt="image12" data-description="The carcass of beauty spent and done" /></a></li>
+										<li><a href="#"><img src="images/thumbs/13.jpg" data-large="images/13.jpg" alt="image13" data-description="Time had not scythed all that youth begun" /></a></li>
+										<li><a href="#"><img src="images/thumbs/14.jpg" data-large="images/14.jpg" alt="image14" data-description="Nor youth all quit; but, spite of heaven's fell rage" /></a></li>
+										<li><a href="#"><img src="images/thumbs/15.jpg" data-large="images/15.jpg" alt="image15" data-description="Some beauty peep'd through lattice of sear'd age" /></a></li>
+										<li><a href="#"><img src="images/thumbs/16.jpg" data-large="images/16.jpg" alt="image16" data-description="Oft did she heave her napkin to her eyne" /></a></li>
+										<li><a href="#"><img src="images/thumbs/17.jpg" data-large="images/17.jpg" alt="image17" data-description="Which on it had conceited characters" /></a></li>
+										<li><a href="#"><img src="images/thumbs/18.jpg" data-large="images/18.jpg" alt="image18" data-description="Laundering the silken figures in the brine" /></a></li>
+										<li><a href="#"><img src="images/thumbs/19.jpg" data-large="images/19.jpg" alt="image19" data-description="That season'd woe had pelleted in tears" /></a></li>
+										<li><a href="#"><img src="images/thumbs/20.jpg" data-large="images/20.jpg" alt="image20" data-description="And often reading what contents it bears" /></a></li>
+										<li><a href="#"><img src="images/thumbs/21.jpg" data-large="images/21.jpg" alt="image21" data-description="As often shrieking undistinguish'd woe" /></a></li>
+										<li><a href="#"><img src="images/thumbs/22.jpg" data-large="images/22.jpg" alt="image22" data-description="In clamours of all size, both high and low" /></a></li>
+										<li><a href="#"><img src="images/thumbs/23.jpg" data-large="images/23.jpg" alt="image23" data-description="Sometimes her levell'd eyes their carriage ride" /></a></li>
+										<li><a href="#"><img src="images/thumbs/24.jpg" data-large="images/24.jpg" alt="image24" data-description="As they did battery to the spheres intend" /></a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- End Elastislide Carousel Thumbnail Viewer -->
+						</div><!-- rg-thumbs -->
+					</div>
+  				</div>
+  				<div class="product__info-wrap"></div>
+  			</div>
+  			<div class="product__tabs-wrap"></div>
+  		</div>
+  		<div class="similar__goods-wrap">
+			<div class="container">
+				<h2>похожие товары</h2>
+			</div>
+			<div class="service__slider-wrap">
+				<div class="service__slider">
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="previous__goods-wrap">
+			<div class="container">
+				<h2>вы смотели</h2>
+			</div>
+			<div class="service__slider-wrap">
+				<div class="service__slider">
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  	</div>
+
+  	<footer>
+  		<div class="container">
+  			<div class="footer__block copyright_wrap">
+  				<a href="#"><img src="img/logo-lght.png" alt="logo"></a>
+  				<div class="copyright">FARKOP-AUTO © 1996-2021</div>
+  				<p>Информация на сайте несёт информационный характер и не является публичной офертой, определяемой положениями Статьи 437 (2) ГК РФ</p>
+  			</div>
+  			<div class="footer__block list">
+  				<ul>
+  					<li><a href="#">Фаркопы</a></li>
+  					<li><a href="#">Электрика и аксессуары для фаркопов</a></li>
+  					<li><a href="#">Боксы на крышу</a></li>
+  					<li><a href="#">Велобагажники</a></li>
+  					<li><a href="#">Крепления для лыж</a></li>
+  					<li><a href="#">Защиты картера</a></li>
+  					<li><a href="#">Рейлинги и багажники</a></li>
+  					<li><a href="#">Парктроники</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer__block list">
+  				<ul>
+  					<li><a href="#">О компании</a></li>
+  					<li><a href="#">Услуги</a></li>
+  					<li><a href="#">Отзывы</a></li>
+  					<li><a href="#">Статьи и новости</a></li>
+  					<li><a href="#">Контакты</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer__block list">
+  				<ul>
+  					<li><a href="#">Вопросы и ответы</a></li>
+  					<li><a href="#">Оплата</a></li>
+  					<li><a href="#">Доставка</a></li>
+  					<li><a href="#">Возврат товара</a></li>
+  					<li><a href="#">Гарантия</a></li>
+  					<li><a href="#">Сертификаты</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer__block">
+  				<div class="footer__block-title">Способы оплаты</div>
+  				<div class="paymentMethods__wrap">
+  					<div class="paymentMethods__block">
+  						<div class="img_part"><img src="img/icon_cash.png" alt=""></div>
+  						<p>Наличные</p>
+  					</div>
+  					<div class="paymentMethods__block">
+  						<div class="img_part"><img src="img/icon_cards.png" alt=""></div>
+  						<p>Банковские карты</p>
+  					</div>
+  					<div class="paymentMethods__block">
+  						<div class="img_part"><img src="img/icon_bank.png" alt=""></div>
+  						<p>Банковский перевод</p>
+  					</div>
+  					<div class="paymentMethods__block margin">
+  						<img src="img/icon-googlPay.png" alt="">
+  					</div>
+  					<div class="paymentMethods__block">
+  						<img src="img/icon-applePay.png" alt="">
+  					</div>
+  				</div>
+  			</div>
+  			<div class="footer__block">
+  				<div class="footer__block-title">мы в соцсетях</div>
+  				<div class="social__wrap">
+  					<a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  				</div>
+  				<a href="#" class="metric"><img src="img/metric-yandex.png" alt=""></a>
+  				<a href="#" class="metric"><img src="img/metric-google.png" alt=""></a>
+  			</div>
+  		</div>
+  		<div class="bottombar">
+  			<div class="container">
+  				<a href="#">Политика конфиденциальности</a>
+  				<a href="#">Использование Cookies</a>
+  				<a href="#">Пользовательское соглашение</a>
+  				<div class="developed-wrap">
+  					<p>Дизайн сайта:</p>
+  					<a href="https://mvacorp.com" target="_blank">MVACorp</a>
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
+
+ </div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+	<script src="lib/slick/slick.js"></script>
+	<script src="https://use.fontawesome.com/c324fc071f.js"></script>
+	<script src="lib/jquery.maskedinput/jquery.maskedinput.js"></script>
+	<script src="lib/ResponsiveImageGallery/js/jquery.easing.1.3.js"></script>
+	<script src="lib/ResponsiveImageGallery/js/jquery.tmpl.min.js"></script>
+	<script src="lib/ResponsiveImageGallery/js/jquery.elastislide.js"></script>
+	<script src="lib/ResponsiveImageGallery/js/gallery.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
