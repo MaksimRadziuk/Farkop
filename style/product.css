@@ -484,20 +484,20 @@ button.buy:hover {
 	left: 0;
 	background-color: #64b2ab;
 }
-.tab__content {
+.tabs__content-wrap .tab__content {
 	display: none;
 	padding-top: 75px;
 }
-.tab__content.active {
+.tabs__content-wrap .tab__content.active {
 	display: block;
 	animation-name: FadeIn;
 }
-.tab__content p {
+.tabs__content-wrap .tab__content p {
 	font-size: 17px;
 	line-height: 1.6;
 	margin-bottom: 25px;
 }
-.tab__content p>b {
+.tabs__content-wrap .tab__content p>b {
 	font-weight: 700;
 }
 #productCharacteristicTab.active {
