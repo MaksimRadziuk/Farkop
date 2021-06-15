@@ -30,6 +30,7 @@ button {
 	box-shadow: none;
 	border:none;
 	cursor: pointer;
+	transition: all 0.2s linear;
 }
 .wrap {
 	width: 100%;
