@@ -124,6 +124,7 @@ button.buy:hover {
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
+	padding-bottom: 50px;
 }
 .product__gallery-wrap {
 	width: 720px;
@@ -377,7 +378,7 @@ button.buy:hover {
 	background: transparent;
 	box-shadow: none;
 	position: absolute;
-	bottom: -810px;
+	bottom: -830px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 530px;
@@ -447,7 +448,7 @@ button.buy:hover {
 }
 .rg-image-wrapper {
 	padding: 0;
-	margin-bottom: 200px;
+	margin-bottom: 150px;
 	border-radius: 5px;
 	border: 1px solid #e1e3e5;
 }
@@ -718,6 +719,37 @@ button.buy:hover {
 
 
 
+@media all and (max-width: 1480px) {
+	.product__gallery-wrap {
+		width: 500px;
+		margin-right: 50px
+	}
+	.es-carousel-wrapper {
+		bottom: -580px
+	}
+	.es-carousel-wrapper {
+		width: 400px
+	}
+	.es-carousel ul li,
+	.es-carousel ul li a {
+		width: 70px;
+		min-width: 70px;
+		height: 70px
+	}
+	.es-nav span {
+		top: -7px
+	}
+	.rg-image-wrapper {
+		margin-bottom: 130px
+	}
+	.tab__trigger-block {
+		padding: 0 50px;
+		font-size: 17px
+	}
+	.tabs__header {
+		height: 60px
+	}
+}
 @media all and (max-width: 1280px) {
 	h2	{
 		font-size: 28px;
