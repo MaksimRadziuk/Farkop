@@ -200,4 +200,25 @@ $(document).ready(function(){
 		$('.quick__review').fadeIn("fast");
 	})
 
+	$('.tab__trigger-block').click(function(){
+		$('.tab__trigger-block').removeClass("active");
+		$(this).addClass("active");
+	})
+	$('#productDescriptionTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#productDescriptionTab').addClass("active");
+	})
+	$('#productCharacteristicTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#productCharacteristicTab').addClass("active");
+	})
+	$('#productInstallationTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#productInstallationTab').addClass("active");
+	})
+	$('#productSimilarGoodsTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#productSimilarGoodsTab').addClass("active");
+	})
+
 });
