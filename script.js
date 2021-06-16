@@ -221,4 +221,9 @@ $(document).ready(function(){
 		$('#productSimilarGoodsTab').addClass("active");
 	})
 
+
+	$('.mobile__tab-trigger').click(function(){
+		$(this).parent('.tab__content').toggleClass("active");
+	})
+
 });
