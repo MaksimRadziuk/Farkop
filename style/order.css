@@ -1,0 +1,132 @@
+h1 {
+	font-size: 33px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 60px;
+}
+.content {
+	border-top: 1px solid #e9ebed;
+}
+
+.breadcrumbs {
+	margin: 35px 0;
+}
+
+p.delivery__place {
+	font-size: 23px;
+	margin-bottom: 20px;
+}
+p.delivery__place>span {
+	font-size: 23px;
+	color: #848e9d;
+}
+
+.order__content-wrap {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.order__tabs-header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-bottom: 5px solid #ccd3dc;
+}
+.order__tab-block {
+	padding:25px 40px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	height: 100%;
+	font-size: 21px;
+	color: #848e9d;
+	cursor: pointer;
+}
+.order__tab-block p {
+	font-size: 15px;
+	color: inherit;
+	margin-top: 5px;
+}
+.order__tab-block.active {
+	color: #64b2ab;
+}
+.order__tab-block.active:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 5px;
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	background-color: #64b2ab;
+}
+.order__tab-content {
+	width: 100%;
+	padding-top: 50px;
+}
+
+h3 {
+	font-size: 21px;
+	font-weight: 600;
+	margin-bottom: 50px;
+	margin-top: 0;
+}
+.order__tab-address {
+	font-size: 19px;
+	margin-bottom: 20px;
+}
+.order__tab-workTime {
+	font-size: 17px;
+	color: #848e9d;
+	margin-bottom: 50px;
+}
+.order__map-wrap {
+	width: 100%;
+	height: 480px;
+	margin-bottom: 50px;
+}
+
+.order__customers-data {
+	border-top: 3px solid #e1e3e5;
+	padding-top: 50px;
+}
+.customers__data-wrap {
+	margin-bottom: 40px;
+	width: 580px;
+}
+.order__customers-data input {
+	display: block;
+	background-color: #fff;
+	width: 100%;
+	height: 45px;
+	border-radius: 5px;
+	border: 1px solid #e1e3e5;
+	padding-left: 20px;
+	font-size: 17px;
+}
+.order__customers-data input::placeholder {
+	color: #474747;
+}
+.order__customers-data input:focus::placeholder {
+	color: transparent;
+}
+.order__customers-data input:focus{
+	outline: none;
+}
+.customers__data-wrap span  {
+	color: var(--lightred-color);
+	font-size: 20px;
+	position: absolute;
+	top: 1px;
+	right: -20px;
+	display: block;
+	pointer-events: none;
+}
+
+
+.order__sidebar-wrap {
+	width: 415px;
+	min-width: 415px;
+	margin-left: 65px;
+}

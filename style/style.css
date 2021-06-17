@@ -428,6 +428,9 @@ a {
 .quick__review .summary__wrap {
 	padding-top: 0;
 	margin-bottom: 30px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
 }
 .quick__review .goods__summary {
 	font-size: 19px;
