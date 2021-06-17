@@ -314,12 +314,12 @@
   				<div class="order__tabs-wrap">
   					<p class="delivery__place">Способ получения заказа в  <span>г. Москва</span></p>
   					<div class="order__tabs-header">
-  						<div class="order__tab-block active" >Самовывоз <p>Бесплатно</p> </div>
-  						<div class="order__tab-block">Установка <p>В 3 пунктах</p></div>
+  						<div class="order__tab-block " >Самовывоз <p>Бесплатно</p> </div>
+  						<div class="order__tab-block active">Установка <p>В 3 пунктах</p></div>
   						<div class="order__tab-block">Доставка курьером в пределах МКАД<p>Бесплатно</p></div>
   						<div class="order__tab-block">Доставка за пределы МКАД <p>400 ₽</p></div>
   					</div>
-  					<div class="order__tab-content">
+  					<div class="order__tab-content ">
   						<h3>Пункт установки</h3>
   						<p class="order__tab-address">Проспект Мира, 186Ас2. Вход с Софийской улицы</p>
   						<p class="order__tab-workTime">Пн-Вс 10:00-20:00, без выходных</p>
@@ -337,15 +337,12 @@
   							<div class="customers__data-wrap">
   								<input type="email" placeholder="Адрес эл. почты">
   							</div>
-  							
-  							
-  							
   						</div>
   						<div class="order__customers-payment">
   							<h3>Способ оплаты</h3>
   							<div class="payment__input-wrap">
   								<div class="payment__input-block">
-  									<input type="radio" name="paymentMethod" id="paymentBankTransfer">
+  									<input type="radio" name="paymentMethod" id="paymentBankTransfer" checked>
   									<label for="paymentBankTransfer">Банковский перевод</label>
   								</div>
   								<div class="payment__input-block">
@@ -361,8 +358,152 @@
   							</div>
   						</div>
   					</div>
+  					<div class="order__tab-content active">
+  						<div class="tab__content-header">
+  							<h3>Пункты установки</h3>
+  							<div class="tab__content-view">
+  								<div class="order__list-view active"><i class="fa fa-bars" aria-hidden="true"></i>Списком</div>
+  								<div class="order__map-view"><i class="fa fa-map-marker" aria-hidden="true"></i>На карте</div>
+  							</div>
+  						</div>
+  						<div class="order__table-deliveryPoints active">
+  							<div class="deliveryPoints__row">
+  								<div class="deliveryPoints__address">
+  									<p class="address">Проспект Мира, 186Ас2. Вход с Софийской улицы</p>
+  									<p class="worktime">Пн-Вс 10:00-20:00, без выходных</p>
+  								</div>
+  								<div class="deliveryPoints__time">Завтра</div>
+  								<div class="deliveryPoints__time-button">
+  									<input type="radio" name="deliveryPointButton" id="deliveryPointButton_1">
+  									<label for="deliveryPointButton_1">
+  										<span class="chosen__button">Выбран</span>
+  										<span class="offer__button">Выбрать этот адрес</span>
+  									</label>
+  								</div>
+  							</div>
+  							<div class="deliveryPoints__row">
+  								<div class="deliveryPoints__address">
+  									<p class="address">Ленинский проспект, 168с1. Вход с Софийской улицы</p>
+  									<p class="worktime">Пн-Вс 10:00-20:00, без выходных</p>
+  								</div>
+  								<div class="deliveryPoints__time">Послезавтра</div>
+  								<div class="deliveryPoints__time-button">
+  									<input type="radio" name="deliveryPointButton" id="deliveryPointButton_2">
+  									<label for="deliveryPointButton_2">
+  										<span class="chosen__button">Выбран</span>
+  										<span class="offer__button">Выбрать этот адрес</span>
+  									</label>
+  								</div>
+  							</div>
+  							<div class="deliveryPoints__row">
+  								<div class="deliveryPoints__address">
+  									<p class="address">Люблинская улица, 82с7. Вход с Софийской улицы</p>
+  									<p class="worktime">Пн-Вс 10:00-20:00, без выходных</p>
+  								</div>
+  								<div class="deliveryPoints__time">Завтра</div>
+  								<div class="deliveryPoints__time-button">
+  									<input type="radio" name="deliveryPointButton" id="deliveryPointButton_3">
+  									<label for="deliveryPointButton_3">
+  										<span class="chosen__button">Выбран</span>
+  										<span class="offer__button">Выбрать этот адрес</span>
+  									</label>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="map__view-deliveryPoints ">
+  							<div class="map__wrap">
+								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aedd271b42d88851128b4b0b97c6e9941b7a86a03f6570ded253a5bcbbaff9e2e&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+							</div>
+  						</div>
+
+  					</div>
   				</div>
-  				<div class="order__sidebar-wrap"></div>
+  				<div class="order__sidebar-wrap">
+  					<div class="order__summary-wrap">
+  						<div class="order__list-wrap">
+  							<div class="quick__review-row">
+					 			<div class="image__wrap">
+					 				<img src="img/popular_goods.png" alt="">
+					 			</div>
+					 			<div class="text__wrap">
+					 				<div class="goods__type">Видеорегистратор</div>
+									<div class="goods__name">SilverStone F1 NTK-9000F</div>
+									<div class="quick__review-price">
+										15 000 &#8381;
+									</div>
+					 			</div>
+					 		</div>
+					 		<div class="quick__review-row">
+					 			<div class="image__wrap">
+					 				<img src="img/popular_goods.png" alt="">
+					 			</div>
+					 			<div class="text__wrap">
+					 				<div class="goods__type">Видеорегистратор</div>
+									<div class="goods__name">SilverStone F1 NTK-9000F</div>
+									<div class="quick__review-price">
+										15 000 &#8381;
+									</div>
+					 			</div>
+					 		</div>
+					 		<div class="quick__review-row">
+					 			<div class="image__wrap">
+					 				<img src="img/popular_goods.png" alt="">
+					 			</div>
+					 			<div class="text__wrap">
+					 				<div class="goods__type">Видеорегистратор</div>
+									<div class="goods__name">SilverStone F1 NTK-9000F</div>
+									<div class="quick__review-price">
+										15 000 &#8381;
+									</div>
+					 			</div>
+					 		</div>
+					 		<div class="quick__review-row">
+					 			<div class="image__wrap">
+					 				<img src="img/popular_goods.png" alt="">
+					 			</div>
+					 			<div class="text__wrap">
+					 				<div class="goods__type">Видеорегистратор</div>
+									<div class="goods__name">SilverStone F1 NTK-9000F</div>
+									<div class="quick__review-price">
+										15 000 &#8381;
+									</div>
+					 			</div>
+					 		</div>
+  						</div>
+  						<div class="show__more-goods"><p>Еще <span>1</span> товар</p></div>
+				 		<div class="order__delivery-summary">
+				 			<p class="title">Способ доставки и оплаты</p>
+				 			<p>Самовывоз, г. Москва, проспект Мира, 186Ас2. Оплата при получении</p>
+				 		</div>
+				 		<div class="quick__review-summary">
+				 			<div class="total__block-row">
+		  						<div class="total__goods-amount">
+		  							Товары (<span>4</span>)
+		  						</div>
+		  						<div class="total__goods-amount price">
+		  							58 110 &#8381;
+		  						</div>
+		  					</div>
+		  					<div class="total__block-row">
+		  						<div class="total__goods-amount">
+		  							Доставка
+		  						</div>
+		  						<div class="total__goods-amount price">
+		  							0 &#8381;
+		  						</div>
+		  					</div>
+				 			<div class="summary__wrap">
+								<div class="goods__summary">Итого</div>
+								<div class="price__summary">58 110 &#8381;</div>
+							</div>
+							<a href="order.html">Подтвердить заказ</a>
+				 		</div>
+				 		<div class="order__additional-info">
+				 			<p>Возникли сложности с оформлением заказа?</p>
+				 			<p class="additional__info-2">Пожалуйста, свяжитесь с нами по телефону: <a href="tel:+78124458083">8 (812) 445-80-83</a> или закажите <a href="#" class="order__triger">обратный звонок</a></p>
+				 		</div>
+  					</div>
+  				</div>
   			</div>
   			
   		</div>

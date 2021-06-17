@@ -226,4 +226,23 @@ $(document).ready(function(){
 		$(this).parent('.tab__content').toggleClass("active");
 	})
 
+	$('.show__more-goods').click(function(){
+		$(this).siblings('.order__list-wrap').addClass("active");
+		$(this).remove();
+	})
+
+
+	$('.order__list-view').click(function(){
+		$('.order__map-view').removeClass("active");
+		$('.map__view-deliveryPoints').removeClass("active");
+		$(this).addClass("active");
+		$('.order__table-deliveryPoints').addClass("active");
+	})
+	$('.order__map-view').click(function(){
+		$('.order__list-view').removeClass("active");
+		$('.order__table-deliveryPoints').removeClass("active");
+		$(this).addClass("active");
+		$('.map__view-deliveryPoints').addClass("active");
+	})
+
 });
