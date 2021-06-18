@@ -134,6 +134,58 @@
  		</div>
  	</div>
 
+
+ 	<div class="popup choose__city">
+ 		<div class="close"><span></span><span></span></div>
+ 		<div class="choose__city-title">Выбор города</div>
+ 		<div class="total__amount-cities">Всего 1157 городов</div>
+ 		<div class="search__wrap">
+ 			<input type="search" placeholder="Поиск города">
+ 			<button><img src="img/icon-search.png" alt=""></button>
+ 		</div>
+ 		<div class="choose__city-list">
+ 			<div class="title">Крупные города</div>
+ 			<ul>
+ 				<li>Москва</li>
+ 				<li>Санкт-Петербург</li>
+ 				<li>Астрахань</li>
+ 				<li>Барнаул</li>
+ 				<li>Владивосток</li>
+ 				<li>Волгоград</li>
+ 				<li>Воронеж</li>
+ 				<li>Екатеринбург</li>
+ 				<li>Ижевск</li>
+ 				<li>Иркутск</li>
+ 				<li>Казань</li>
+ 				<li>Кемерово</li>
+ 				<li>Краснодар</li>
+ 				<li>Красноярск</li>
+ 				<li>Липецк</li>
+ 				<li>Махачкала</li>
+ 				<li>Нижний Новгород</li>
+ 				<li>Новокузнецк</li>
+ 				<li>Новосибирск</li>
+ 				<li>Омск</li>
+ 				<li>Оренбург</li>
+ 				<li>Пенза</li>
+ 				<li>Пермь</li>
+ 				<li>Ростов-на-Дону</li>
+ 				<li>Рязань</li>
+ 				<li>Самара</li>
+ 				<li>Саратов</li>
+ 				<li>Тольятти</li>
+ 				<li>Томск</li>
+ 				<li>Тюмень</li>
+ 				<li>Ульяновск</li>
+ 				<li>Уфа</li>
+ 				<li>Хабаровск</li>
+ 				<li>Чебоксары</li>
+ 				<li>Челябинск</li>
+ 				<li>Ярославль</li>
+ 			</ul>
+ 		</div>
+ 	</div>
+
  	<div class="popup" id="background"></div>
  	<div class="popup" id="transparentBackground"></div>
 
@@ -314,12 +366,12 @@
   				<div class="order__tabs-wrap">
   					<p class="delivery__place">Способ получения заказа в  <span>г. Москва</span></p>
   					<div class="order__tabs-header">
-  						<div class="order__tab-block " >Самовывоз <p>Бесплатно</p> </div>
-  						<div class="order__tab-block active">Установка <p>В 3 пунктах</p></div>
-  						<div class="order__tab-block">Доставка курьером в пределах МКАД<p>Бесплатно</p></div>
-  						<div class="order__tab-block">Доставка за пределы МКАД <p>400 ₽</p></div>
+  						<div class="order__tab-block active" id="triggerClientsTransport">Самовывоз <p>Бесплатно</p> </div>
+  						<div class="order__tab-block " id="triggerDeliveryInstallation">Установка <p>В 3 пунктах</p></div>
+  						<div class="order__tab-block " id="triggerDeliveryСourier">Доставка курьером в пределах МКАД<p>Бесплатно</p></div>
+  						<div class="order__tab-block" id="triggerDeliveryOverMKAD">Доставка за пределы МКАД <p>400 ₽</p></div>
   					</div>
-  					<div class="order__tab-content ">
+  					<div class="order__tab-content active" id="deliveryClientsTransport">
   						<h3>Пункт установки</h3>
   						<p class="order__tab-address">Проспект Мира, 186Ас2. Вход с Софийской улицы</p>
   						<p class="order__tab-workTime">Пн-Вс 10:00-20:00, без выходных</p>
@@ -358,7 +410,7 @@
   							</div>
   						</div>
   					</div>
-  					<div class="order__tab-content active">
+  					<div class="order__tab-content " id="deliveryInstallation">
   						<div class="tab__content-header">
   							<h3>Пункты установки</h3>
   							<div class="tab__content-view">
@@ -366,7 +418,7 @@
   								<div class="order__map-view"><i class="fa fa-map-marker" aria-hidden="true"></i>На карте</div>
   							</div>
   						</div>
-  						<div class="order__table-deliveryPoints active">
+  						<div class="order__table-deliveryPoints active" id="deliveryInstallation">
   							<div class="deliveryPoints__row">
   								<div class="deliveryPoints__address">
   									<p class="address">Проспект Мира, 186Ас2. Вход с Софийской улицы</p>
@@ -415,7 +467,381 @@
 								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aedd271b42d88851128b4b0b97c6e9941b7a86a03f6570ded253a5bcbbaff9e2e&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
 							</div>
   						</div>
-
+  						<div class="order__notification">
+  							<img src="img/headphones_icon.png" alt="">
+  							<p>После оформления заказа, мы свяжемся с вами и проконсультируем по стоимости и времени установки</p>
+  						</div>
+  						<div class="order__date-wrap">
+  							<p class="title">Выберите желаемую дату установки</p>
+  							<div class="input__date-wrap">
+  								<input type="date">
+  							</div>
+  						</div>
+  						<div class="order__customers-data">
+  							<h3>Данные получателя</h3>
+  							<div class="customers__data-wrap">
+								<input type="text" placeholder="Фамилия, имя и отчество" required><span>*</span>
+  							</div>
+  							<div class="customers__data-wrap">
+  								<input type="tel" placeholder="Номер телефона" required><span>*</span>
+  							</div>
+  							<div class="customers__data-wrap">
+  								<input type="email" placeholder="Адрес эл. почты">
+  							</div>
+  						</div>
+  						<div class="order__customers-payment">
+  							<h3>Способ оплаты</h3>
+  							<div class="payment__input-wrap">
+  								<div class="payment__input-block">
+  									<input type="radio" name="paymentMethod" id="paymentBankTransfer" checked>
+  									<label for="paymentBankTransfer">Банковский перевод</label>
+  								</div>
+  								<div class="payment__input-block">
+  									<input type="radio" name="paymentMethod" id="paymentOnDeliveryCash">
+  									<label for="paymentOnDeliveryCash">При получении</label>
+  									<p>Наличные, банковские карты, ApplePay, GooglePay</p>
+  								</div>
+  								<div class="payment__input-block">
+  									<input type="radio" name="paymentMethod" id="paymentOnDeliveryCard">
+  									<label for="paymentOnDeliveryCard">При получении</label>
+  									<p>Банковские карты</p>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  					<div class="order__tab-content " id="deliveryСourier">
+  						<div class="order__notification">
+  							<img src="img/headphones_icon.png" alt="">
+  							<p>После оформления заказа, мы свяжемся с вами и проконсультируем по стоимости и времени установки</p>
+  						</div>
+  						<div class="order__date-wrap">
+  							<p class="title">Выберите желаемую дату установки</p>
+  							<div class="input__date-wrap">
+  								<input type="date">
+  							</div>
+  						</div>
+  						<div class="order__customers-data">
+  							<h3>Данные получателя</h3>
+  							<div class="customers__data-wrap">
+								<input type="text" placeholder="Фамилия, имя и отчество" required><span>*</span>
+  							</div>
+  							<div class="customers__data-wrap">
+  								<input type="tel" placeholder="Номер телефона" required><span>*</span>
+  							</div>
+  							<div class="customers__data-wrap">
+  								<input type="email" placeholder="Адрес эл. почты">
+  							</div>
+  						</div>
+  						<div class="delivery__address-wrap">
+  							<h3>Адрес доставки</h3>
+  							<div class="delivery__input-wrap">
+  								<input type="text" placeholder="Улица">
+  								<input type="text" placeholder="Дом">
+  								<input type="text" placeholder="Стр./корпус">
+  								<input type="text" placeholder="Стр./корпус">
+  								<span>*</span>
+  							</div>
+  							<p class="note">* Доставка осуществляется до подъезда или автомобиля, без подъема на этаж</p>
+  						</div>
+  						<div class="order__customers-payment">
+  							<h3>Способ оплаты</h3>
+  							<div class="payment__input-wrap">
+  								<div class="payment__input-block">
+  									<input type="radio" name="paymentMethod" id="paymentBankTransfer" checked>
+  									<label for="paymentBankTransfer">Банковский перевод</label>
+  								</div>
+  								<div class="payment__input-block">
+  									<input type="radio" name="paymentMethod" id="paymentOnDeliveryCash">
+  									<label for="paymentOnDeliveryCash">При получении</label>
+  									<p>Наличные, банковские карты, ApplePay, GooglePay</p>
+  								</div>
+  								<div class="payment__input-block">
+  									<input type="radio" name="paymentMethod" id="paymentOnDeliveryCard">
+  									<label for="paymentOnDeliveryCard">При получении</label>
+  									<p>Банковские карты</p>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  					<div class="order__tab-content " id="deliveryOverMKAD">
+  						<h3>Выберите пункт выдачи и способ оплаты</h3>
+  						<div class="deliveryPoint__parent-wrap">
+  							<div class="deliveryPoint__table-wrap">
+  								<div class="deliveryPoint__table">
+  									<div class="deliveryPoint__row">
+  										<div class="checkbox__wrap">
+  											<input type="radio" name="deliveryPointTable" id="deliveryPointTable-1">
+  											<label for="deliveryPointTable-1"></label>
+  										</div>
+  										<div class="deliveryPoint__date">26 мая</div>
+  										<div class="deliveryPoint__select-wrap">
+  											<select>
+  												<option value="Онлайн оплата">Онлайн оплата</option>
+  												<option value="Оплата наличными">Оплата наличными</option>
+  												<option value="Оплата картой">Оплата картой</option>
+  											</select>
+  										</div>
+  										<div class="deliveryPoint__price">840 ₽</div>
+  										<div class="deliveryPoint__icons">
+  											<img src="img/cash_icon.png" alt="">
+  											<img src="img/cards_icon.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company">
+  											<img src="img/cdek_logo.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company-title">Сдэк, стандартная доставка</div>
+  										<div class="deliveryPoint__company-adress">
+  											<div class="select__wrap">
+  												<select>
+  													<option value="">Пункты выдачи  57</option>
+  													<option value="">Пункты выдачи  56</option>
+  													<option value="">Пункты выдачи  55</option>
+  													<option value="">Пункты выдачи  54</option>
+  													<option value="">Пункты выдачи  53</option>
+  												</select>
+  											</div>
+  										</div>
+  									</div>
+  									<div class="deliveryPoint__row">
+  										<div class="checkbox__wrap">
+  											<input type="radio" name="deliveryPointTable" id="deliveryPointTable-2">
+  											<label for="deliveryPointTable-2"></label>
+  										</div>
+  										<div class="deliveryPoint__date">26 мая</div>
+  										<div class="deliveryPoint__select-wrap">
+  											<select>
+  												<option value="Онлайн оплата">Онлайн оплата</option>
+  												<option value="Оплата наличными">Оплата наличными</option>
+  												<option value="Оплата картой">Оплата картой</option>
+  											</select>
+  										</div>
+  										<div class="deliveryPoint__price">840 ₽</div>
+  										<div class="deliveryPoint__icons">
+  											<img src="img/cards_icon.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company">
+  											<img src="img/farkop_logo.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company-title">Сдэк, стандартная доставка</div>
+  										<div class="deliveryPoint__company-adress">
+  											<p>ул. Олега Кошевого, д. 63</p>
+  											<p class="grey">пн.-пт. с 09:00 до 20:00,</p>
+  											<p class="grey">сб. с 10:00 до 14:00</p>
+  										</div>
+  									</div>
+  									<div class="deliveryPoint__row">
+  										<div class="checkbox__wrap">
+  											<input type="radio" name="deliveryPointTable" id="deliveryPointTable-3">
+  											<label for="deliveryPointTable-3"></label>
+  										</div>
+  										<div class="deliveryPoint__date">26 мая</div>
+  										<div class="deliveryPoint__select-wrap">
+  											<select>
+  												<option value="Онлайн оплата">Онлайн оплата</option>
+  												<option value="Оплата наличными">Оплата наличными</option>
+  												<option value="Оплата картой">Оплата картой</option>
+  											</select>
+  										</div>
+  										<div class="deliveryPoint__price">840 ₽</div>
+  										<div class="deliveryPoint__icons">
+  											<img src="img/cash_icon.png" alt="">
+  											<img src="img/cards_icon.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company">
+  											<img src="img/cdek_logo.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company-title">Сдэк, стандартная доставка</div>
+  										<div class="deliveryPoint__company-adress">
+  											<div class="select__wrap">
+  												<select>
+  													<option value="">Пункты выдачи  57</option>
+  													<option value="">Пункты выдачи  56</option>
+  													<option value="">Пункты выдачи  55</option>
+  													<option value="">Пункты выдачи  54</option>
+  													<option value="">Пункты выдачи  53</option>
+  												</select>
+  											</div>
+  										</div>
+  									</div>
+  									<div class="deliveryPoint__row">
+  										<div class="checkbox__wrap">
+  											<input type="radio" name="deliveryPointTable" id="deliveryPointTable-4">
+  											<label for="deliveryPointTable-4"></label>
+  										</div>
+  										<div class="deliveryPoint__date">26 мая</div>
+  										<div class="deliveryPoint__select-wrap">
+  											<select>
+  												<option value="Онлайн оплата">Онлайн оплата</option>
+  												<option value="Оплата наличными">Оплата наличными</option>
+  												<option value="Оплата картой">Оплата картой</option>
+  											</select>
+  										</div>
+  										<div class="deliveryPoint__price">840 ₽</div>
+  										<div class="deliveryPoint__icons">
+  											<img src="img/cards_icon.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company">
+  											<img src="img/farkop_logo.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company-title">Сдэк, стандартная доставка</div>
+  										<div class="deliveryPoint__company-adress">
+  											<p>ул. Олега Кошевого, д. 63</p>
+  											<p class="grey">пн.-пт. с 09:00 до 20:00,</p>
+  											<p class="grey">сб. с 10:00 до 14:00</p>
+  										</div>
+  									</div>
+  									<div class="deliveryPoint__row">
+  										<div class="checkbox__wrap">
+  											<input type="radio" name="deliveryPointTable" id="deliveryPointTable-5">
+  											<label for="deliveryPointTable-5"></label>
+  										</div>
+  										<div class="deliveryPoint__date">26 мая</div>
+  										<div class="deliveryPoint__select-wrap">
+  											<select>
+  												<option value="Онлайн оплата">Онлайн оплата</option>
+  												<option value="Оплата наличными">Оплата наличными</option>
+  												<option value="Оплата картой">Оплата картой</option>
+  											</select>
+  										</div>
+  										<div class="deliveryPoint__price">840 ₽</div>
+  										<div class="deliveryPoint__icons">
+  											<img src="img/cash_icon.png" alt="">
+  											<img src="img/cards_icon.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company">
+  											<img src="img/cdek_logo.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company-title">Сдэк, стандартная доставка</div>
+  										<div class="deliveryPoint__company-adress">
+  											<div class="select__wrap">
+  												<select>
+  													<option value="">Пункты выдачи  57</option>
+  													<option value="">Пункты выдачи  56</option>
+  													<option value="">Пункты выдачи  55</option>
+  													<option value="">Пункты выдачи  54</option>
+  													<option value="">Пункты выдачи  53</option>
+  												</select>
+  											</div>
+  										</div>
+  									</div>
+  									<div class="deliveryPoint__row">
+  										<div class="checkbox__wrap">
+  											<input type="radio" name="deliveryPointTable" id="deliveryPointTable-6">
+  											<label for="deliveryPointTable-6"></label>
+  										</div>
+  										<div class="deliveryPoint__date">26 мая</div>
+  										<div class="deliveryPoint__select-wrap">
+  											<select>
+  												<option value="Онлайн оплата">Онлайн оплата</option>
+  												<option value="Оплата наличными">Оплата наличными</option>
+  												<option value="Оплата картой">Оплата картой</option>
+  											</select>
+  										</div>
+  										<div class="deliveryPoint__price">840 ₽</div>
+  										<div class="deliveryPoint__icons">
+  											<img src="img/cards_icon.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company">
+  											<img src="img/farkop_logo.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company-title">Сдэк, стандартная доставка</div>
+  										<div class="deliveryPoint__company-adress">
+  											<p>ул. Олега Кошевого, д. 63</p>
+  											<p class="grey">пн.-пт. с 09:00 до 20:00,</p>
+  											<p class="grey">сб. с 10:00 до 14:00</p>
+  										</div>
+  									</div>
+  									<div class="deliveryPoint__row">
+  										<div class="checkbox__wrap">
+  											<input type="radio" name="deliveryPointTable" id="deliveryPointTable-7">
+  											<label for="deliveryPointTable-7"></label>
+  										</div>
+  										<div class="deliveryPoint__date">26 мая</div>
+  										<div class="deliveryPoint__select-wrap">
+  											<select>
+  												<option value="Онлайн оплата">Онлайн оплата</option>
+  												<option value="Оплата наличными">Оплата наличными</option>
+  												<option value="Оплата картой">Оплата картой</option>
+  											</select>
+  										</div>
+  										<div class="deliveryPoint__price">840 ₽</div>
+  										<div class="deliveryPoint__icons">
+  											<img src="img/cash_icon.png" alt="">
+  											<img src="img/cards_icon.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company">
+  											<img src="img/cdek_logo.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company-title">Сдэк, стандартная доставка</div>
+  										<div class="deliveryPoint__company-adress">
+  											<div class="select__wrap">
+  												<select>
+  													<option value="">Пункты выдачи  57</option>
+  													<option value="">Пункты выдачи  56</option>
+  													<option value="">Пункты выдачи  55</option>
+  													<option value="">Пункты выдачи  54</option>
+  													<option value="">Пункты выдачи  53</option>
+  												</select>
+  											</div>
+  										</div>
+  									</div>
+  									<div class="deliveryPoint__row">
+  										<div class="checkbox__wrap">
+  											<input type="radio" name="deliveryPointTable" id="deliveryPointTable-8">
+  											<label for="deliveryPointTable-8"></label>
+  										</div>
+  										<div class="deliveryPoint__date">26 мая</div>
+  										<div class="deliveryPoint__select-wrap">
+  											<select>
+  												<option value="Онлайн оплата">Онлайн оплата</option>
+  												<option value="Оплата наличными">Оплата наличными</option>
+  												<option value="Оплата картой">Оплата картой</option>
+  											</select>
+  										</div>
+  										<div class="deliveryPoint__price">840 ₽</div>
+  										<div class="deliveryPoint__icons">
+  											<img src="img/cards_icon.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company">
+  											<img src="img/farkop_logo.png" alt="">
+  										</div>
+  										<div class="deliveryPoint__company-title">Сдэк, стандартная доставка</div>
+  										<div class="deliveryPoint__company-adress">
+  											<p>ул. Олега Кошевого, д. 63</p>
+  											<p class="grey">пн.-пт. с 09:00 до 20:00,</p>
+  											<p class="grey">сб. с 10:00 до 14:00</p>
+  										</div>
+  									</div>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="order__customers-data">
+  							<h3>Данные получателя</h3>
+  							<div class="customers__data-wrap">
+								<input type="text" placeholder="Фамилия, имя и отчество" required><span>*</span>
+  							</div>
+  							<div class="customers__data-wrap">
+  								<input type="tel" placeholder="Номер телефона" required><span>*</span>
+  							</div>
+  							<div class="customers__data-wrap">
+  								<input type="email" placeholder="Адрес эл. почты">
+  							</div>
+  						</div>
+  						<div class="order__deliveryCompany-docs">
+  							<h3>Документы для транспортной компании</h3>
+  							<div class="deliveryCompany__tabs-wrap">
+  								<div class="deliveryCompany__tab active" id="deliveryCompanyPassportTrigger">Паспорт</div>
+  								<div class="deliveryCompany__tab" id="deliveryCompanyLicenseTrigger">Водительские права</div>
+  							</div>
+  							<div class="deliveryCompany__content-wrap active" id="deliveryCompanyPassport">
+  								<input type="text" placeholder="Серия и номер паспорта">
+  								<p><span>!</span>Серия и номер паспорта обязательно заполняются только при заказе через ТК “Деловые линии”</p>
+  							</div>
+  							<div class="deliveryCompany__content-wrap" id="deliveryCompanyLicense">
+  								<input type="text" placeholder="Серия и номер водительских прав">
+  								<p><span>!</span>Серия и номер водительских прав обязательно заполняются только при заказе через ТК “Деловые линии”</p>
+  							</div>
+  						</div>
   					</div>
   				</div>
   				<div class="order__sidebar-wrap">

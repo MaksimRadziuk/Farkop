@@ -245,4 +245,62 @@ $(document).ready(function(){
 		$('.map__view-deliveryPoints').addClass("active");
 	})
 
+	$('#triggerClientsTransport').click(function(){
+		$('.order__tab-block').removeClass("active");
+		$('.order__tab-content').removeClass("active");
+		$(this).addClass("active");
+		$('#deliveryClientsTransport').addClass("active");
+	})
+	$('#triggerDeliveryInstallation').click(function(){
+		$('.order__tab-block').removeClass("active");
+		$('.order__tab-content').removeClass("active");
+		$(this).addClass("active");
+		$('#deliveryInstallation').addClass("active");
+	})
+	$('#triggerDeliveryСourier').click(function(){
+		$('.order__tab-block').removeClass("active");
+		$('.order__tab-content').removeClass("active");
+		$(this).addClass("active");
+		$('#deliveryСourier').addClass("active");
+	})
+
+	$('#triggerDeliveryOverMKAD').click(function(){
+		$('.order__tab-block').removeClass("active");
+		$('.order__tab-content').removeClass("active");
+		$(this).addClass("active");
+		$('#background').fadeIn('fast');
+		$('.choose__city').fadeIn('slow');
+	})
+
+	$(".choose__city-list ul li").click(function(){
+		$('.delivery__place span').text('г. Иркутск');
+		$('.popup').fadeOut('fast');
+		$('#background').fadeOut('slow');
+		$('#deliveryOverMKAD').addClass("active");
+		$('#triggerDeliveryOverMKAD').addClass("active");
+	})
+	$(".choose__city .close").click(function(){
+		$('.order__tab-content').removeClass("active");
+		$('.order__tab-block').removeClass("active");
+		$('.popup').fadeOut('fast');
+		$('#background').fadeOut('slow');
+		$('#deliveryClientsTransport').addClass("active");
+		$('#triggerClientsTransport').addClass("active");
+	})
+
+
+	$('#deliveryCompanyPassportTrigger').click(function(){
+		$('.deliveryCompany__content-wrap').removeClass("active");
+		$('.deliveryCompany__tab').removeClass("active");
+		$(this).addClass("active");
+		$('#deliveryCompanyPassport').addClass("active");
+	})
+	$('#deliveryCompanyLicenseTrigger').click(function(){
+		$('.deliveryCompany__content-wrap').removeClass("active");
+		$('.deliveryCompany__tab').removeClass("active");
+		$(this).addClass("active");
+		$('#deliveryCompanyLicense').addClass("active");
+	})
+
+
 });
