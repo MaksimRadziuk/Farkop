@@ -223,7 +223,7 @@ $(document).ready(function(){
 
 
 	$('.mobile__tab-trigger').click(function(){
-		$(this).parent('.tab__content').toggleClass("active");
+		$(this).parent('.tab__content, .order__tab-content').toggleClass("active");
 	})
 
 	$('.show__more-goods').click(function(){
@@ -268,6 +268,11 @@ $(document).ready(function(){
 		$('.order__tab-block').removeClass("active");
 		$('.order__tab-content').removeClass("active");
 		$(this).addClass("active");
+		$('#background').fadeIn('fast');
+		$('.choose__city').fadeIn('slow');
+	})
+
+	$('#chooseCityTrigger').click(function(){
 		$('#background').fadeIn('fast');
 		$('.choose__city').fadeIn('slow');
 	})
