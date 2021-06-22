@@ -926,6 +926,7 @@ footer>.container {
 	color: #a1a9b3;
 	text-decoration: underline;
 	margin-right: 6vw;
+	font-weight: 400;
 }
 .bottombar .developed-wrap {
 	display: flex;
