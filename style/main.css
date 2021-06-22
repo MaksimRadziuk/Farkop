@@ -792,10 +792,10 @@ a.show__more:hover {
 		margin-left: 0
 	}
 	.category__block {
-		height: 210px
+		height: 210px;
 	}
 	.category__block-title {
-		top: 130px;
+		top: 150px;
 		font-size: 17px;	
 	}
 	h2	{
@@ -884,6 +884,9 @@ a.show__more:hover {
 		font-size: 20px;
 		margin-top: 25px
 	}
+	.category__block-title {
+		top: 135px;
+	}
 }
 @media all and (max-width: 900px) {
 	.news__wrap {
@@ -942,6 +945,9 @@ a.show__more:hover {
 	.filter__select-wrap.carGeneration,
 	.filter__select-wrap{
 		width: 100%;
+	}
+	.category__block-title {
+		top: 150px
 	}
 }
 @media all and (max-width: 810px){
@@ -1098,8 +1104,17 @@ a.show__more:hover {
 	.news, .category {
 		padding-bottom: 40px
 	}
+	.category__block {
+		background-position: bottom center;
+	}
+	.category__block-title {
+		top: 135px;
+	}
 }
 @media all and (max-width: 420px) {
+	.category__block {
+	    background-position: center -60px;
+	}
 	.category__tile-wrap {
 		grid-template-columns:1fr;
 	}
