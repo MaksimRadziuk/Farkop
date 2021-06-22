@@ -308,4 +308,9 @@ $(document).ready(function(){
 	})
 
 
+	$('.faq__block-question').click(function(){
+		$(this).siblings('.faq__block-response').slideToggle("fast");
+	})
+
+
 });
