@@ -143,7 +143,7 @@ h2 {
 	top: 0;
 }
 .contact__wrap .icon i {
-	font-size: 28px;
+	font-size: 26px;
 	color: #848e9d;
 }
 
@@ -162,12 +162,137 @@ h2 {
 }
 
 
+@media all and (max-width: 1550px) {
+	.tile__title-wrap .title,
+	.tile__price-wrap>* {
+		font-size: 19px
+	}
+	.tile__image-wrap {
+		width: 110px;
+		height: 110px;
+		min-width: 110px;
+		margin-right: 20px
+	}
+	.tile__header {
+		margin-bottom: 30px
+	}
+	.contact__wrap {
+		padding-top: 60px;
+		padding-left: 80px
+	}
+	.map__wrap {
+		width: 180%;
+	}
+}
+@media all and (max-width: 1380px) {
+	.service__tile {
+		padding: 20px 30px 30px 20px;
+	}
+	.tile__image-wrap {
+		width: 90px;
+		height: 90px;
+		min-width: 90px;
+	}
+	.service__tiles-wrap {
+		column-gap: 20px;
+		grid-row-gap: 20px;
+	}
+	h2 {
+		font-size: 24px;
+		margin: 50px 0;
+	}
+	.contact__wrap .address p {
+		font-size: 19px
+	}
+	.service__contact-button {
+		font-size: 19px;
+		margin-top: 30px;
+		width: 230px;
+		height: 40px;
+		font-size: 17px
+	}
+}
+@media all and (max-width: 1180px) {
+	.tile__image-wrap {
+		width: 70px;
+		height: 70px;
+		min-width: 70px;
+	}
+	.tile__header {
+		margin-bottom: 20px
+	}
+	.tile__title-wrap .title, .tile__price-wrap>* {
+		font-size: 17px
+	}
+	.service__description {
+		font-size: 15px;
+		margin-bottom: 20px
+	}
+	.map__wrap {
+		width: 100%;
+		height: 490px
+	}
+	.service__contact-wrap {
+		padding-bottom: 50px
+	}
+}
+
 @media all and (max-width: 990px) {
 	h1	{
 		font-size: 28px;
 		margin: 30px 0;
 	}
-Ъ
+	.service__tiles-wrap {
+		grid-template-columns: 1fr 1fr;
+	}
+	.page__description {
+		font-size: 17px;
+		margin-bottom: 30px	
+	}
+	.service__contact-wrap {
+		flex-direction: column;
+	}
+}
+@media all and (max-width: 670px) {
+	.service__tiles-wrap {
+		grid-template-columns: 1fr;
+	}
+}
+@media all and (max-width: 520px) {
+	.map__wrap {
+		width: calc(100% + 20px);
+		left: -10px;
+	}
+	.contact__wrap {
+		padding-left: 50px;
+		padding-top: 30px;
+	}
+	.contact__wrap .icon {
+		width: 25px;
+		text-align: center;
+	}
+	.contact__wrap .icon img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.contact__wrap .icon i {
+		display: block;
+		margin: 0 auto;
+		font-size: 23px
+	}
+	.contact__wrap .road {
+		font-size: 15px
+	}
+	.service__contact-wrap {
+		padding-bottom: 10px
+	}
+	h2 {
+		font-size: 18px;
+		margin-top: 35px;
+		margin-bottom: 20px
+	}
+}
 @media all and (max-width: 420px) {
 	h1 {
 		font-size: 21px
