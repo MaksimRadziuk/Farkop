@@ -51,7 +51,7 @@ h1 {
 	animation-name: FadeIn;
 }
 
-.allnews__wrap {
+.content__wrap {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -230,7 +230,7 @@ h1 {
 	}
 }
 @media all and (max-width: 1080px) {
-	.allnews__wrap {
+	.content__wrap {
 	    grid-template-columns: repeat(3, 1fr);
 	}
 }
@@ -263,10 +263,13 @@ h1 {
 		display: none;
 	}
 	.tabs__content-wrap .tab__content {
-		padding-top: 0;
+		padding: 0 10px;
 		border-bottom: 1px solid #e9ebed;
 		height: 70px;
 		display: block;
+		overflow: hidden;
+		width: calc(100% + 20px);
+		left: -10px;
 	}
 	.tabs__content-wrap .tab__content.active {
 		height: auto;
@@ -289,7 +292,7 @@ h1 {
 	}
 }
 @media all and (max-width: 780px) {
-	.allnews__wrap {
+	.content__wrap {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
@@ -305,7 +308,7 @@ h1 {
 	.news__block-mark {
 		font-size: 12px
 	}
-	.allnews__wrap {
+	.content__wrap {
 		grid-template-columns: 1fr;
 		grid-row-gap: 35px;
 	}

@@ -182,6 +182,15 @@ $(document).ready(function(){
 	})
 
 	$(window).resize(function(){
+		if (innerWidth > 899) {
+			let activeTab = $('.tab__content').hasClass('active');
+			if (activeTab == 1) {}
+			if (activeTab == 0) {
+				$('#newsAllTab').addClass('active');
+				$('.tab__trigger-block').removeClass('active');
+				$('#newsAllTrigger').addClass('active')
+			}
+		}
 		if(innerWidth<561) {
 			$('.catalog__result-tiles').removeClass('rows');
 			$('.catalog__result-tiles').addClass('tiles');
@@ -219,6 +228,24 @@ $(document).ready(function(){
 	$('#productSimilarGoodsTrigger').click(function(){
 		$('.tab__content').removeClass("active");
 		$('#productSimilarGoodsTab').addClass("active");
+	})
+
+
+	$('#newsAllTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#newsAllTab').addClass("active");
+	})
+	$('#newsArticlesTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#newsArrticlesTab').addClass("active");
+	})
+	$('#newsNewsTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#newsNewsTab').addClass("active");
+	})
+	$('#newsPortfolioTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#newsPortfolioTab').addClass("active");
 	})
 
 
