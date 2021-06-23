@@ -186,9 +186,6 @@ h1 {
 	margin-right: 0;
 }
 
-.mobile__tab-trigger, .show__more {
-	display: none;
-}
 .show__more {
 	display: flex;
 	align-items: center;
@@ -206,6 +203,9 @@ h1 {
 .show__more:hover {
 	background-color: var(--blue-color);
 	color: #fff;
+}
+.mobile__tab-trigger, .show__more {
+	display: none;
 }
 
 
@@ -283,6 +283,9 @@ h1 {
 	}
 	.tabs__content-wrap {
 		padding-bottom: 50px;
+	}
+	.show__more {
+		display: flex;
 	}
 }
 @media all and (max-width: 780px) {
