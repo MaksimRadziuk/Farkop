@@ -971,7 +971,7 @@ button.buy:hover {
 	.catalog__sidebar-block button {
 		margin-bottom: 10px
 	}
-	.catalog__wrap, .pagination__wrap {
+	.catalog__wrap {
 		grid-template-columns: 1fr;
 	}
 	.catalog__result-wrap {
