@@ -348,7 +348,7 @@ a.show__more:hover {
 	content: '?';
 	position: absolute;
 	left: 0;
-	top: -10px;
+	top: -17px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -363,7 +363,7 @@ a.show__more:hover {
 .faq__block-response {
 	width: 100%;
 	padding-left: 120px;
-	margin-top: 30px;
+	margin-top: 50px;
 	font-size: 21px;
 	display: none;
 }
@@ -371,7 +371,7 @@ a.show__more:hover {
 	content: '!';
 	position: absolute;
 	left: 40px;
-	top: 0px;
+	top: -17px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -542,18 +542,22 @@ a.show__more:hover {
 	}
 	.faq__block-question:before,
 	.faq__block-response:before {
-		width: 30px;
-		height: 30px;
-		font-size: 24px;
+		width: 25px;
+		height: 25px;
+		font-size: 22px;
+		top: -6px;
 	}
 	.faq__block-question {
-		padding-left: 45px
+		padding-left: 40px
 	}
 	.faq__block-response {
-		padding-left: 65px;
-		margin-top: 20px
+		padding-left: 40px;
+		margin-top: 25px
 	}
 	.faq__block-response:before {
-		left: 20px
+		left: 0px
+	}
+	.faq__wrap {
+		grid-row-gap: 30px;
 	}
 }
