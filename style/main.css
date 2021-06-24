@@ -692,6 +692,7 @@ a.show__more:hover {
 .news__block-img a {
 	width: 100%;
 	height: 100%;
+	display: block;
 }
 .news__block-img img {
 	width: 100%;
