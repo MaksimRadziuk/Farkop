@@ -239,15 +239,145 @@ ol{
 
 
 
+@media all and (max-width: 1650px) {
+	.article__body-wrap {
+		padding-right:10px
+	}
+	.article__double-images .img__wrap {
+		width: 42%
+	}
+}
 @media all and (max-width: 1380px) {
 	h1 {
 		font-size: 28px;
 		margin-bottom: 30px;
 	}
+	.article__sidebar-wrap {
+		margin-left: 30px
+	}
+	.article__body-wrap p,
+	.article__body-wrap li {
+		font-size: 17px;
+		margin: 10px 0;
+	}
+	.article__body-wrap ol>li:before {
+		top: 2px
+	}
+	.article__body-wrap p {
+		margin-bottom: 20px
+	}
+	.article__double-images .img__wrap {
+		height: 340px
+	}
+	.article__image-gallery .img__wrap {
+		height: 250px
+	}
+	.article__content-wrap {
+		padding-bottom: 60px
+	}
+}
+@media all and (max-width: 1180px) {
+	.article__double-images .img__wrap {
+		height: 270px
+	}
+	.article__image-left {
+		width: 330px;
+		height: 270px;
+	}
+	.article__image-gallery .img__wrap {
+		height: 210px
+	}
+	.article__image-gallery,
+	.article__double-images {
+		margin: 30px 0;
+	}
+	.article__fullwidth-image {
+		margin-bottom: 30px
+	}
+	.article__image-left {
+		margin-right: 30px;
+		margin-bottom: 30px	
+	}
+	.article__publish-date {
+		font-size: 19px
+	}
+	.article__sidebar-title {
+		font-size: 17px;
+		margin-bottom: 30px
+	}
+	.news__block-title {
+		font-size: 15px
+	}
+	.article__sidebar-wrap {
+		width: 230px;
+		min-width: 230px;
+	}
 }
 @media all and (max-width: 990px) {
 	h1	{
 		margin: 30px 0;
+		font-size: 26px
+	}
+	.article__sidebar-wrap {
+		display: none;
+	}
+	.article__body-wrap {
+		padding-right: 0;
+		border-right: none;
+	}
+
+}
+@media all and (max-width: 720px) {
+	.article__fullwidth-image {
+		height: 350px
+	}
+	.article__double-images .img__wrap {
+		height: 210px
+	}
+	.article__image-left {
+	    width: 230px;
+	    height: 180px;
+	}
+	.article__image-gallery .img__wrap {
+		height: 150px
+	}
+	.article__content-wrap {
+		padding-bottom: 30px
+	}
+}
+@media all and (max-width: 520px) {
+	h1 {
+		font-size: 24px
+	}
+	.article__publish-date {
+		font-size: 15px;
+		margin-bottom: 30px
+	}
+	.article__body-wrap p {
+		font-size: 15px;
+		margin-bottom: 25px;
+	}
+	.article__body-wrap li {
+		font-size: 15px;
+	}
+	.article__body-wrap ol, .article__body-wrap ul {
+		margin-bottom: 25px
+	}
+	.article__image-gallery, .article__double-images {
+		flex-direction: column;
+		margin-bottom: 5px
+	}
+	.article__double-images .img__wrap,
+	.article__image-left,
+	.article__image-gallery .img__wrap {
+		margin-right: 0;
+		margin-bottom: 20px;
+		height: 230px;
+		width: 100%;
+		float: auto;
+	}
+	.article__content-wrap {
+		padding-bottom: 10px
 	}
 }
 @media all and (max-width: 420px) {
