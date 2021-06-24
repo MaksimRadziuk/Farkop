@@ -366,6 +366,8 @@ a.show__more:hover {
 	margin-top: 50px;
 	font-size: 21px;
 	display: none;
+	animation-name: fadeIn;
+	animation-duration: 1s;
 }
 .faq__block-response:before {
 	content: '!';
