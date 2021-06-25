@@ -245,6 +245,15 @@ form button {
 	.map__wrap {
 		width: 180%;
 	}
+	.contact__bottom-part .container {
+		grid-column-gap: 50px;
+	}
+	.customers__data-wrap {
+		padding-right: 25px
+	}
+	.customers__data-wrap span {
+		right: 10px
+	}
 }
 @media all and (max-width: 1380px) {
 	.contact__wrap .address p {
@@ -256,6 +265,46 @@ form button {
 		width: 230px;
 		height: 40px;
 		font-size: 17px
+	}
+	.captcha__checkbox {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.captcha__wrap {
+		margin-bottom: 20px
+	}
+	.checkbox__wrap {
+		width: 100%
+	}
+	.contacts__howToGet p {
+		font-size: 17px;
+		margin-bottom: 25px
+	}
+	.customers__data-wrap {
+		margin-bottom: 30px
+	}
+	.customers__data-wrap input,
+	.customers__data-wrap textarea {
+		font-size: 17px
+	}
+	.customers__data-wrap textarea {
+		margin-bottom: 30px
+	}
+	form button {
+		margin-top: 50px
+	}
+}
+@media all and (max-width: 1280px) {
+	h2 {
+		font-size: 20px;
+		margin: 30px 0 30px 0;
+	}
+	.customers__data-wrap input {
+		height: 40px
+	}
+	.customers__data-wrap textarea {
+		height: 150px
 	}
 }
 @media all and (max-width: 1180px) {
@@ -272,8 +321,20 @@ form button {
 		font-size: 28px;
 		margin: 30px 0;
 	}
-	.service__contact-wrap {
+	h2 {
+		font-size: 24px
+	}
+	.service__contact-wrap .container {
 		flex-direction: column;
+		padding-bottom: 0
+	}
+	.contact__bottom-part .container {
+		grid-template-columns: 1fr;
+		grid-row-gap: 30px;
+		padding-bottom: 50px
+	}
+	.service__contact-wrap {
+		padding-bottom: 30px
 	}
 }
 @media all and (max-width: 520px) {
@@ -304,6 +365,22 @@ form button {
 	}
 	.service__contact-wrap {
 		padding-bottom: 10px
+	}
+	form button {
+		font-size: 17px;
+		margin-top: 0px
+	}
+	h2 {
+		font-size: 19px
+	}
+	.customers__data-wrap span {
+		right: 0
+	}
+	.customers__data-wrap {
+		padding-right: 15px
+	}
+	.contacts__howToGet p {
+		margin-bottom: 20px;
 	}
 }
 @media all and (max-width: 420px) {
