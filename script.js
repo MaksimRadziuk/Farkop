@@ -52,8 +52,6 @@ $(document).ready(function(){
 	$('.filter__step-third p').click(function(){
 		let selectCarGeneration = $(this).attr('data-value');
 		$('#carGeneration option:contains("'+selectCarGeneration+'")').prop("selected",true);
-		/*$('.filter__step-third').removeClass('active');
-		$('.filter__step-forth').addClass('active');*/
 	})
 	$('.filter__clear-button').click(function(){
 		$('#carGeneration option, #carLabel option, #carModel option').prop("selected",false);
