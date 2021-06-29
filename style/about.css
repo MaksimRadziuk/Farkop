@@ -1,0 +1,90 @@
+h1 {
+	font-size: 33px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 60px;
+}
+.content {
+	border-top: 1px solid #e9ebed;
+}
+
+.breadcrumbs {
+	margin: 35px 0;
+}
+
+.first_screen {
+	padding-bottom: 80px;
+	padding-top: 70px;
+}
+.first_screen {
+	background-image: url(../img/about_bcg.png);
+}
+.first_screen span.secondary_title {
+	text-transform: none;
+	width: 100%;
+	max-width: 680px;
+	margin-bottom: 40px;
+}
+.first_screen a {
+	width: 250px;
+	height: 50px;
+}
+.first_screen a .icon {
+	margin-right: 15px;
+	display: block;
+	width: 25px;
+	height: 25px;
+	min-width: 25px;
+}
+.first_screen a .icon>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.service__block-img {
+	height: auto;
+	border: 1px solid #e9ebed;
+	border-radius: 5px;
+	padding: 20px;
+}
+.service__block-wrap {
+	border: none;
+}
+.service__block-title {
+	text-align: left;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.service__block-wrap {
+	height: auto;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+a.pdf__link {
+	font-size: 17px;
+	margin-bottom: 0px;
+	display: flex;
+	align-content: center;
+	justify-content: flex-start;
+}
+a.pdf__link>span {
+	color: #848e9d;
+	font-size: 17px;
+	margin-left: 10px;
+}
+a.pdf__link>img {
+	display: inline-block;
+	width: 25px;
+	margin-right: 20px;
+	margin-bottom: 0;
+	margin-top: -5px;
+}
+a.pdf__link:hover {
+	color: var(--green-color);
+}
+a.pdf__link:hover>span {
+	color: var(--green-color);
+}
+.service__slider-wrap .slick-prev, .service__slider-wrap .slick-next {
+	top: 35%;
+}
