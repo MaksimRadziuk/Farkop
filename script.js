@@ -247,6 +247,21 @@ $(document).ready(function(){
 	})
 
 
+	
+	$('#feedbackMiraTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#feedbackMira').addClass("active");
+	})
+	$('#feedbackLeninTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#feedbackLenin').addClass("active");
+	})
+	$('#feedbackLublinTrigger').click(function(){
+		$('.tab__content').removeClass("active");
+		$('#feedbackLublin').addClass("active");
+	})
+
+
 	$('.mobile__tab-trigger').click(function(){
 		$(this).parent('.tab__content, .order__tab-content').toggleClass("active");
 	})

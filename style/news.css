@@ -142,7 +142,7 @@ h1 {
 .pagination__wrap {
 	padding: 75px 0 100px 0;
 }
-.pagination__block {\
+.pagination__block {
 	width: 100%;
 	grid-column-start: 2;
 	grid-column-end: 3;
