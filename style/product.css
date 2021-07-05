@@ -730,7 +730,7 @@ button.buy:hover {
 
 
 .terms__price {
-	display: block;
+	display: none;
 	max-height: 100vh;
 	overflow: auto;
 	top: 50%;
@@ -817,9 +817,6 @@ button.buy:hover {
 }
 
 
-#background {
-	display: block;
-}
 
 .termsPrice__table {
 	width: 100%;
