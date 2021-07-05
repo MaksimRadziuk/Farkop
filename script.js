@@ -353,4 +353,10 @@ $(document).ready(function(){
 	})
 
 
+	$('.table__info-wrap .checkbox__wrap').click(function() {
+		$('.terms__price .table__map-wrap').hide();
+		$(this).parent('.table__info-wrap').siblings('.table__map-wrap').slideDown("slow");
+	})
+
+
 });
