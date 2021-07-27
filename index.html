@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Главная Alfa-KIOMI</title>
+	<title>Главная Farkop-auto</title>
 	
 	<link rel="shortcut icon" type="image/jpg" href="img/favicon32.png"/>
 	<link rel="shortcut icon" type="image/jpg" href="img/favicon16.png"/>
@@ -18,7 +18,7 @@
 <body>
 
  <div class="wrap">
- 	<div class="up"><img src="img/up.png" alt="go up"></div>
+ 	<div class="up"><img src="img/button-up.png" alt="go up"></div>
 
  	<div class="cookieBar">
  		<div class="container">
@@ -31,130 +31,1063 @@
  		</div>
  	</div>
 
+ 	<div class="popup popup__order">
+ 		<div class="close">
+ 			<span></span>
+ 			<span></span>
+ 		</div>
+ 		<div class="popup__title">Оставить заявку</div>
+ 		<form class="popup__form"> 
+ 			<input type="text" placeholder="Ваше имя">
+ 			<input type="tel" placeholder="Телефон" required>
+ 			<button>Отправить</button>
+ 			<div class="checkbox__wrap">
+ 				<input type="checkbox" id="confirmation" checked>
+ 				<label for="confirmation">Я принимаю <a href="#">Политику конфиденциальности</a> и <a href="#">Пользовательское соглашение</a></label>
+ 			</div>
+ 		</form>
+ 	</div>
+
+ 	<div class="popup preview">
+		<div class="close"><span></span><span></span></div>
+ 		<div class="preview__mainInfo">
+ 			<div class="preview__imgWrap">
+ 				<img src="img/popular_goods.png" alt="">
+ 			</div>
+ 			<div class="preview__infoWrap">
+				<div class="popular__block-type">Видеорегистратор</div>
+				<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+				<div class="popular__block-article">
+					<span>Артикул:</span>
+					<span>45287452</span>
+				</div>
+				<div class="wrapper">
+					<div class="popular__block-availiability">
+						<span>В наличии: </span>
+						<span>5 264 шт.</span>
+					</div>
+					<a href="article.html">Подробнее</a>
+				</div>
+ 				<div class="popular__block-price">
+					<span>15 000</span>
+					<span>&#8381;</span>
+				</div>
+				<button class="buy order__triger">Купить</button>
+ 			</div>
+ 		</div>
+		<div class="preview__tabsWrap">
+			<div class="preview__tabs-triggers">
+				<div class="tab__trigger tab__trigger-description ">Описание</div>
+				<div class="tab__trigger tab__trigger-characteristics active">Характристики</div>
+			</div>
+			<div class="tab__content preview__description ">
+				<p>Автомобильный видеорегистратор XPX P9 – имеет: переднюю камеру, салонную камеру и выносную заднюю камеру, с русским меню.</p>
+				<p>Задняя камера пишет видео в обычном режиме, при включении задней передачи может использоваться как камера заднего хода.</p>
+				<p>Циклическая запись, штамп даты и времени, просмотр записанных файлов, ночная съемка благодаря чувствительной матрице и функции HDR</p>
+			</div>
+			<div class="tab__content preview__characteristics active">
+				<div class="preview__characteristics-row">
+					<div class="title">Дисплей:</div>
+					<div class="readig">4 дюйма IPS 800*480</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Камера:</div>
+					<div class="readig">1/4" CMOS, High-Definition (HD) 5МП</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Угол обзора основной камеры:</div>
+					<div class="readig">170°</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Угол обзора задней камеры:</div>
+					<div class="readig">120°</div>
+				</div>
+				<div class="preview__characteristics-row">
+					<div class="title">Угол обзора салонной камеры:</div>
+					<div class="readig">120°</div>
+				</div>
+			</div>
+		</div>
+ 	</div>
+
+ 	<div class="popup confirmation">
+ 		<div class="confirmation__text">Вы уверены, что хотите удалить этот товар из корзины?</div>
+ 		<div class="buttons__wrap">
+ 			<div class="confirmation__button" id="deleteRowConfirm">Да</div>
+ 			<div class="confirmation__button" id="deleteRowCancel">Нет</div>
+ 		</div>
+ 	</div>
+
  	<div class="popup" id="background"></div>
+ 	<div class="popup" id="transparentBackground"></div>
 
   	<header>
 		<div class="topbar">
 			<div class="container">
-				<div class="topbar_left-wrap">
-					<div class="topbar_block">
-						<img src="img/icon-map_mark.png" alt="">
-						<p>г. Новосибирск, ул. Зональная 2/1</p>
-					</div>
-					<div class="topbar_block">
-						<img src="img/icon-mail.png" alt="">
-						<a href="mailto:info@alfa-kiomi.ru">info@alfa-kiomi.ru</a>
-					</div>
-					<div class="topbar_block">
-						<img src="img/icon-phone.png" alt="">
-						<a href="tel:+73833495961">+7 (383) 349-59-61</a>
-					</div>
-					<div class="topbar_block">
-						<img src="img/icon-whatsapp.png" alt="">
-						<a href="">+7 (983) 314-91-38</a>
-					</div>
-					<div class="topbar_block">
-						<a href="#" class="circle"><img src="img/icon-vk.png" alt=""></a>
-						<a href="#" class="circle"><img src="img/icon-youtube.png" alt=""></a>
-						<a href="#" class="circle"><img src="img/icon-instagram.png" alt=""></a>
-					</div>
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
-				<div class="topbar_right-wrap">
-					<div class="topbar_block">
-						<img src="img/icon-lock.png" alt="">
-						<p class="enter_lobby">Вход</p>
-						<span>/</span>
-						<p class="registration_trigger">Регистрация</p>
-					</div>
+				<div class="logo__wrap">
+					<a href="index.html"><img src="img/logo-dark.png" alt="Farkop-auto logo"></a>
+				</div>
+				<div class="mobile__triggers">
+					<div class="phone__trigger"><i class="fa fa-phone" aria-hidden="true"></i></div>
+					<div class="address__trigger"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+				</div>
+				<div class="info__wrap phone_wrap">
+					<a href="tel:74959759408"><span><i class="fa fa-phone" aria-hidden="true"></i></span>+7 (495) 975 94 08</a>
+					<p>10:00 - 20:00 Пн - Вс</p>
+					<div class="close">
+			 			<span></span>
+			 			<span></span>
+			 		</div>
+				</div>
+				<div class="info__wrap address_wrap">
+					<p class="address"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Москва, проспект Мира, 186Ас2</p>
+					<a href="contacts.html">3 автосервиса</a>
+					<div class="close">
+			 			<span></span>
+			 			<span></span>
+			 		</div>
+				</div>
+				<div class="social__wrap">
+					<a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				</div>
+				<div class="basket__wrap">
+					<div class="popup quick__review">
+				 		<div class="quick__review-row">
+				 			<div class="delete__row-button"><span></span><span></span></div>
+				 			<div class="image__wrap">
+				 				<img src="img/popular_goods.png" alt="">
+				 			</div>
+				 			<div class="text__wrap">
+				 				<div class="goods__type">Видеорегистратор</div>
+								<div class="goods__name">SilverStone F1 NTK-9000F</div>
+								<div class="quick__review-price">
+									15 000 &#8381;
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="quick__review-row">
+				 			<div class="delete__row-button"><span></span><span></span></div>
+				 			<div class="image__wrap">
+				 				<img src="img/popular_goods.png" alt="">
+				 			</div>
+				 			<div class="text__wrap">
+				 				<div class="goods__type">Видеорегистратор</div>
+								<div class="goods__name">SilverStone F1 NTK-9000F</div>
+								<div class="quick__review-price">
+									15 000 &#8381;
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="quick__review-row">
+				 			<div class="delete__row-button"><span></span><span></span></div>
+				 			<div class="image__wrap">
+				 				<img src="img/popular_goods.png" alt="">
+				 			</div>
+				 			<div class="text__wrap">
+				 				<div class="goods__type">Видеорегистратор</div>
+								<div class="goods__name">SilverStone F1 NTK-9000F</div>
+								<div class="quick__review-price">
+									15 000 &#8381;
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="quick__review-row">
+				 			<div class="delete__row-button"><span></span><span></span></div>
+				 			<div class="image__wrap">
+				 				<img src="img/popular_goods.png" alt="">
+				 			</div>
+				 			<div class="text__wrap">
+				 				<div class="goods__type">Видеорегистратор</div>
+								<div class="goods__name">SilverStone F1 NTK-9000F</div>
+								<div class="quick__review-price">
+									15 000 &#8381;
+								</div>
+				 			</div>
+				 		</div>
+				 		<div class="quick__review-summary">
+				 			<div class="summary__wrap">
+								<div class="goods__summary">Итого</div>
+								<div class="price__summary">58 110 &#8381;</div>
+							</div>
+							<a href="order.html">Оформить заказ</a>
+				 		</div>
+				 	</div>
+					<div class="basket__wrap-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+					<div class="basket__wrap-amount">5</div>
+					<div class="basket__wrap-text">товаров</div>
 				</div>
 			</div>
 		</div>
 		<div class="navbar">
 			<div class="container">
-				<a href="index.html" class="logo-wrap">
-					<img src="img/logo-header.png" alt="">
-				</a>
-				<div class="navbar_counter-wrap">
-					<div class="counter_tiles-wrap">
-						<div class="counter_tile-block">
-							<p>4</p>
+				<ul>
+					<li class="parent_menu">
+						<a href="catalog.html">Каталог</a><div class="caret"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+						<div class="submenu">
+							<ul>
+								<li><a href="catalog.html">Фаркопы</a></li>
+								<li><a href="catalog.html">Электрика и аксессуары для фаркопов</a></li>
+								<li><a href="catalog.html">Боксы на крышу</a></li>
+								<li><a href="catalog.html">Велобагажники</a></li>
+								<li><a href="catalog.html">Крепления для лыж</a></li>
+								<li><a href="catalog.html">Защиты картера</a></li>
+								<li><a href="catalog.html">Рейлинги и багажники</a></li>
+								<li><a href="catalog.html">Парктроники</a></li>
+								<li><a href="catalog.html">Велобагажники</a></li>
+								<li><a href="catalog.html">Крепления для лыж</a></li>
+								<li><a href="catalog.html">Защиты картера</a></li>
+							</ul>
 						</div>
-						<div class="counter_tile-block">
-							<p>8</p>
-						</div>
-						<div class="counter_tile-block">
-							<p>3</p>
-						</div>
-						<div class="counter_tile-block">
-							<p>2</p>
-						</div>
-						<div class="counter_tile-block">
-							<p>5</p>
-						</div>
-					</div>
-					<p>запчастей <br>сейчас на складе</p>
-				</div>
-				<ul class="navigation">
-					<li>Каталог <img src="img/icon-caret.png" alt="">
-						<ul class="dropdown_menu">
-							<li><a href="#">Автозапчасти</a></li>
-							<li><a href="#">Авто на разборе</a></li>
-						</ul>
 					</li>
-					<li><a href="about.html">О нас</a></li>
-					<li><a href="warranty.html">Гарантии</a></li>
-					<li><a href="delivery.html">Доставка</a></li>
+					<li><a href="service.html">Услуги и цены</a></li>
+					<li><a href="news.html">Портфолио</a></li>
+					<li><a href="faq.html">Вопрос-Ответ</a></li>
 					<li><a href="feedback.html">Отзывы</a></li>
-					<li><a href="contact.html">Контакты</a></li>
+					<li><a href="about.html">О нас</a></li>
+					<li><a href="news.html">Новости и статьи</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+		 			<div class="close">
+			 			<span></span>
+			 			<span></span>
+			 		</div>
 				</ul>
-				<div class="navbar_basket-wrap">
-					<img src="img/icon-cart.png" alt="">
-					<div class="basket_info-wrap">
-						<p>5  товаров</p>
-						<p>250 000 &#8381;</p>
+				<div class="navbar__search">
+					<div class="navbar__search-visible">
+						<img src="img/icon-search.png" alt="search">
+						<p>Поиск</p>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="search__popup">
+			<form class="search__popup-wrap">
+				<img src="img/icon-search.png" alt="search image">
+				<input type="text" placeholder="Я ищу...">
+				<button type="submit">Поиск</button>
+				<div class="close">
+		 			<span></span>
+		 			<span></span>
+		 		</div>
+			</form>
 		</div>
   	</header>
 
   	<div class="content">
   		<div class="first_screen">
-  			<div class="container">
-  				<h1>
-	  				<span class="main_title">Контрактные и новые автозапчасти для иномарок</span>
-	  				<span class="secondary_title">От надежного поставщика с 20-летним опытом</span>
-	  			</h1>
-	  			<div class="first_screen-links">
-	  				<a href="#">Автозапчасти</a>
-	  				<a href="#">Авто на разборе</a>
-	  			</div>
-  			</div>
+  			<h1>
+  				<span class="main_title">Дополнительное оборудование</span>
+  				<span class="secondary_title">для вашего автомобиля</span>
+  			</h1>
+  			<a href="catalog.html">Все товары</a>
   		</div>
   		<div class="filter">
   			<div class="container">
   				<div class="filter_wrap">
   					<div class="filter__wrap-header">
-  						<div class="filter__tab-trigger"></div>
-  						<div class="filter__tab-trigger"></div>
-  						<div class="filter__tab-trigger"></div>
+  						<div class="title">Выберите модель:</div>
+  						<form class="filter__wrap-form">
+  							<div class="filter__select-wrap">
+  								<select name="carLabel" id="carLabel">
+  									<option value=""></option>
+  									<option value="Audi">Audi</option>
+  									<option value="BMW">BMW</option>
+  									<option value="Ford">Ford</option>
+  									<option value="Hyundai">Hyundai</option>
+  									<option value="Kia">Kia</option>
+  									<option value="Lada">Lada</option>
+  									<option value="Mazda">Mazda</option>
+  									<option value="Mercedes">Mercedes</option>
+  									<option value="Mitsubishi">Mitsubishi</option>
+  									<option value="Nissan">Nissan</option>
+  									<option value="Toyota">Toyota</option>
+  									<option value="Volkswagen">Volkswagen</option>
+  									<option value="Honda">Honda</option>
+  									<option value="Great Wall">Great Wall</option>
+  									<option value="Jeep">Jeep</option>
+  									<option value="Land Rover">Land Rover</option>
+  									<option value="Lexus">Lexus</option>
+  									<option value="Skoda">Skoda</option>
+  									<option value="UAZ">UAZ</option>
+  									<option value="Renault">Renault</option>
+  									<option value="Opel">Opel</option>
+  									<option value="Suzuki">Suzuki</option>
+  									<option value="Chevrolet">Chevrolet</option>
+  									<option value="Chery">Chery</option>
+  								</select>
+  							</div>
+  							<div class="filter__select-wrap">
+  								<select name="carModel" id="carModel">
+  									<option value=""></option>
+  									<option value="Model 1">Model 1</option>
+  									<option value="Model 2">Model 2</option>
+  									<option value="Model 3">Model 3</option>
+  									<option value="Model 4">Model 4</option>
+  									<option value="Model 5">Model 5</option>
+  									<option value="Model 6">Model 6</option>
+  									<option value="Model 7">Model 7</option>
+  									<option value="Model 8">Model 8</option>
+  								</select>
+  							</div>
+  							<div class="filter__select-wrap carGeneration">
+  								<select name="carGeneration" id="carGeneration">
+  									<option value=""></option>
+  									<option value="Фаркопы">Фаркопы</option>
+			  						<option value="Велокрепления на фаркоп">Велокрепления на фаркоп</option>
+			  						<option value="Штатная электрика фаркопа">Штатная электрика фаркопа</option>
+			  						<option value="Боксы на крышу">Боксы на крышу</option>
+			  						<option value="Багажники на фаркоп">Багажники на фаркоп</option>
+			  						<option value="Велокрепления на крышу">Велокрепления на крышу</option>
+			  						<option value="Универсальная электрика фаркопа">Универсальная электрика фаркопа</option>
+			  						<option value="Крепления для лыж">Крепления для лыж</option>
+			  						<option value="Велокрепления на заднюю дверь">Велокрепления на заднюю дверь</option>
+			  						<option value="Парктроники">Парктроники</option>
+			  						<option value="Коврики в салон">Коврики в салон</option>
+			  						<option value="Воздушные отопители">Воздушные отопители</option>
+			  						<option value="Брызговики">Брызговики</option>
+			  						<option value="Коврики в багажник">Коврики в багажник</option>
+			  						<option value="Защиты картера">Защиты картера</option>
+			  						<option value="Вставки под квадрат">Вставки под квадрат</option>
+			  						<option value="Аксессуары и запчасти для фаркопов">Аксессуары и запчасти для фаркопов</option>
+			  						<option value="Видеорегистраторы">Видеорегистраторы</option>
+			  						<option value="Жидкостные отопители">Жидкостные отопители</option>
+			  						<option value="Сетки в бампер">Сетки в бампер</option>
+  								</select>
+  							</div>
+  							<div class="filter__clear-button">
+  								<i class="fa fa-times" aria-hidden="true"></i>
+  								<p>Сбросить все</p>
+  							</div>
+  							<a type="submit" href="catalog.html">В каталог</a>
+  						</form>
   					</div>
-  					<div class="filter__tab filter__tab-first active">
-  						
+  					<div class="filter__step filter__step-first active">
+  						<div class="cars__logo-wrap">
+	  						<p  data-value='Audi' class="cars_sign"><img src="img/logo-audi.png" alt=""></p>
+	  						<p  data-value='BMW' class="cars_sign"><img src="img/logo-bmw.png" alt=""></p>
+	  						<p  data-value='Ford' class="cars_sign"><img src="img/logo-ford.png" alt=""></p>
+	  						<p  data-value='Hyundai' class="cars_sign"><img src="img/logo-hyundai.png" alt=""></p>
+	  						<p  data-value='Kia' class="cars_sign"><img src="img/logo-kia.png" alt=""></p>
+	  						<p  data-value='Lada' class="cars_sign"><img src="img/logo-lada.png" alt=""></p>
+	  						<p  data-value='Mazda' class="cars_sign"><img src="img/logo-mazda.png" alt=""></p>
+	  						<p  data-value='Mercedes' class="cars_sign"><img src="img/logo-mercedes.png" alt=""></p>
+	  						<p  data-value='Mitsubishi' class="cars_sign"><img src="img/logo-mitsubishi.png" alt=""></p>
+	  						<p  data-value='Nissan' class="cars_sign"><img src="img/logo-nissan.png" alt=""></p>
+	  						<p  data-value='Toyota' class="cars_sign"><img src="img/logo-toyota.png" alt=""></p>
+	  						<p  data-value='Volkswagen' class="cars_sign"><img src="img/logo-volkswagen.png" alt=""></p>
+	  					</div>
+	  					<ul>
+	  						<li><p data-value='Audi'>Audi</p></li>
+	  						<li><p data-value='Chevrolet'>Chevrolet</p></li>
+	  						<li><p data-value='Chery'>Chery</p></li>
+	  						<li><p data-value='BMW'>BMW</p></li>
+	  						<li><p data-value='Ford'>Ford</p></li>
+	  						<li><p data-value='Hyundai'>Hyundai</p></li>
+	  						<li><p data-value='Honda'>Honda</p></li>
+	  						<li><p data-value='Great Wall'>Great Wall</p></li>
+	  						<li><p data-value='Jeep'>Jeep</p></li>
+	  						<li><p data-value='Land Rover'>Land Rover</p></li>
+	  						<li><p data-value='Lada'>Lada</p></li>
+	  						<li><p data-value='Kia'>Kia</p></li>
+	  						<li><p data-value='Lexus'>Lexus</p></li>
+	  						<li><p data-value='Mitsubishi'>Mitsubishi</p></li>
+	  						<li><p data-value='Mercedes'>Mercedes</p></li>
+	  						<li><p data-value='Mazda'>Mazda</p></li>
+	  						<li><p data-value='Nissan'>Nissan</p></li>
+	  						<li><p data-value='Skoda'>Skoda</p></li>
+	  						<li><p data-value='Renault'>Renault</p></li>
+	  						<li><p data-value='Opel'>Opel</p></li>
+	  						<li><p data-value='Suzuki'>Suzuki</p></li>
+	  						<li><p data-value='Volkswagen'>Volkswagen</p></li>
+	  						<li><p data-value='UAZ'>UAZ</p></li>
+	  						<li><p data-value='Toyota'>Toyota</p></li>
+	  						<li><p data-value='Audi'>Audi</p></li>
+	  						<li><p data-value='Chevrolet'>Chevrolet</p></li>
+	  						<li><p data-value='Chery'>Chery</p></li>
+	  						<li><p data-value='BMW'>BMW</p></li>
+	  						<li><p data-value='Ford'>Ford</p></li>
+	  						<li><p data-value='Hyundai'>Hyundai</p></li>
+	  						<li><p data-value='Honda'>Honda</p></li>
+	  						<li><p data-value='Great Wall'>Great Wall</p></li>
+	  						<li><p data-value='Jeep'>Jeep</p></li>
+	  						<li><p data-value='Land Rover'>Land Rover</p></li>
+	  						<li><p data-value='Lada'>Lada</p></li>
+	  						<li><p data-value='Kia'>Kia</p></li>
+	  						<li><p data-value='Lexus'>Lexus</p></li>
+	  						<li><p data-value='Mitsubishi'>Mitsubishi</p></li>
+	  						<li><p data-value='Mercedes'>Mercedes</p></li>
+	  						<li><p data-value='Mazda'>Mazda</p></li>
+	  						<li><p data-value='Nissan'>Nissan</p></li>
+	  						<li><p data-value='Skoda'>Skoda</p></li>
+	  						<li><p data-value='Renault'>Renault</p></li>
+	  						<li><p data-value='Opel'>Opel</p></li>
+	  						<li><p data-value='Suzuki'>Suzuki</p></li>
+	  						<li><p data-value='Volkswagen'>Volkswagen</p></li>
+	  						<li><p data-value='UAZ'>UAZ</p></li>
+	  						<li><p data-value='Toyota'>Toyota</p></li>
+	  					</ul>
   					</div>
-  					<div class="filter__tab filter__tab-second ">
-  						
+  					<div class="filter__step filter__step-second ">
+  						<ul>
+	  						<li><p data-value='Model 1'>Model 1</p></li>
+	  						<li><p data-value='Model 2'>Model 2</p></li>
+	  						<li><p data-value='Model 3'>Model 3</p></li>
+	  						<li><p data-value='Model 4'>Model 4</p></li>
+	  						<li><p data-value='Model 5'>Model 5</p></li>
+	  						<li><p data-value='Model 6'>Model 6</p></li>
+	  						<li><p data-value='Model 7'>Model 7</p></li>
+	  						<li><p data-value='Model 8'>Model 8</p></li>
+	  					</ul>
   					</div>
-  					<div class="filter__tab filter__tab-third">
-  						
+  					<div class="filter__step filter__step-third">
+  						<ul>
+	  						<li><p data-value="Фаркопы">Фаркопы</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Велокрепления на фаркоп">Велокрепления на фаркоп</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Штатная электрика фаркопа">Штатная электрика фаркопа</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Боксы на крышу">Боксы на крышу</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Багажники на фаркоп">Багажники на фаркоп</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Велокрепления на крышу">Велокрепления на крышу</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Универсальная электрика фаркопа">Универсальная электрика фаркопа</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Крепления для лыж">Крепления для лыж</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Велокрепления на заднюю дверь">Велокрепления на заднюю дверь</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Парктроники">Парктроники</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Коврики в салон">Коврики в салон</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Воздушные отопители">Воздушные отопители</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Брызговики">Брызговики</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Коврики в багажник">Коврики в багажник</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Защиты картера">Защиты картера</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Вставки под квадрат">Вставки под квадрат</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Аксессуары и запчасти для фаркопов">Аксессуары и запчасти для фаркопов</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Видеорегистраторы">Видеорегистраторы</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Жидкостные отопители">Жидкостные отопители</p><span class="filter__goods-amount">12</span></li>
+	  						<li><p data-value="Сетки в бампер">Сетки в бампер</p><span class="filter__goods-amount">12</span></li>
+	  					</ul>
   					</div>
   				</div>
   			</div>
+  			<div class="bottom_part">Показать все марки<i class="fa fa-caret-down" aria-hidden="true"></i></div>
   		</div>
+		<div class="category">
+			<div class="container">
+				<h2>категории товаров</h2>
+				<div class="category__tile-wrap">
+					<a href="catalog.html" class="category__block">
+						<div class="category__block-title">Фаркопы</div>
+					</a>
+					<a href="catalog.html" class="category__block">
+						<div class="category__block-title">Электрика и аксессуары для фаркопов</div>
+					</a>
+					<a href="catalog.html" class="category__block">
+						<div class="category__block-title">Боксы на крышу</div>
+					</a>
+					<a href="catalog.html" class="category__block">
+						<div class="category__block-title">Велобагажники</div>
+					</a>
+					<a href="catalog.html" class="category__block">
+						<div class="category__block-title">Крепления для лыж</div>
+					</a>
+					<a href="catalog.html" class="category__block">
+						<div class="category__block-title">Защиты картера</div>
+					</a>
+					<a href="catalog.html" class="category__block">
+						<div class="category__block-title">Рейлинги и багажники</div>
+					</a>
+					<a href="catalog.html" class="category__block">
+						<div class="category__block-title">Парктроники</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="statistics">
+			<div class="statistics__wrap">
+				<div class="statistics__block">
+					<div class="statistics__block-main blue">25 <span>лет</span></div>
+					<div class="statistics__block-secondary">успешного опыта</div>
+				</div>
+				<div class="statistics__block">
+					<div class="statistics__block-more main">></div>
+					<div class="statistics__block-main main">20 000</div>
+					<div class="statistics__block-secondary">довольных клиентов</div>
+				</div>
+				<div class="statistics__block">
+					<div class="statistics__block-more green">></div>
+					<div class="statistics__block-main green">500</div>
+					<div class="statistics__block-secondary">отзывов о работе</div>
+				</div>
+				<div class="statistics__block">
+					<div class="statistics__block-more red">></div>
+					<div class="statistics__block-main red">15 000</div>
+					<div class="statistics__block-secondary">товаров в каталоге</div>
+				</div>
+			</div>
+		</div>
+		<div class="popular">
+			<h2>Популярные товары</h2>
+			<div class="container">
+				<div class="popular__wrap">
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+					<div class="popular__block">
+						<div class="popular__block-imgWrap">
+							<img src="img/popular_goods.png" alt="">
+						</div>
+						<div class="popular__block-textWrap">
+							<div class="popular__block-price">
+								<span>15 000</span>
+								<span>&#8381;</span>
+							</div>
+							<div class="popular__block-type">Видеорегистратор</div>
+							<div class="popular__block-name">SilverStone F1 NTK-9000F</div>
+							<div class="popular__block-article">
+								<span>Артикул:</span>
+								<span>45287452</span>
+							</div>
+							<div class="popular__block-availiability">
+								<span>В наличии: </span>
+								<span>5 264 шт.</span>
+							</div>
+							<button class="buy order__triger">Купить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="catalog.html" class="show__more">Показать все</a>
+		</div>
+		<div class="advantages">
+			<h2>преимущества farkop-auto</h2>
+			<div class="container">
+				<div class="advantages__wrap">
+					<div class="advantages__block">
+						<div class="advantages__block-icon"><img src="img/advantage-warranty.png" alt=""></div>
+						<div class="advantages__block-title">Гарантийные обязательства</div>
+						<div class="advantages__block-text">Занимаемся установкой дополнительного оборудования более 25 лет. Сертифицированы. Срок гарантии на монтаж и оборудование - 1 год и более</div>
+					</div>
+					<div class="advantages__block">
+						<div class="advantages__block-icon"><img src="img/advantage-delivery.png" alt=""></div>
+						<div class="advantages__block-title">Доставка по всей России</div>
+						<div class="advantages__block-text">Недорогая доставка товара в любой город надежными транспортными компаниями (на ваш выбор). Расчет стоимости доставки доступен прямо на сайте</div>
+					</div>
+					<div class="advantages__block">
+						<div class="advantages__block-icon"><img src="img/advantage-employee.png" alt=""></div>
+						<div class="advantages__block-title">Квалифицированный	персонал</div>
+						<div class="advantages__block-text">Наши обученные профессиональные мастера с многолетним опытом работы легко делают самые сложные инсталляции с интеграцией к штатной проводке</div>
+					</div>
+					<div class="advantages__block">
+						<div class="advantages__block-icon"><img src="img/advantage-speed.png" alt=""></div>
+						<div class="advantages__block-title">Высокая скорость работы</div>
+						<div class="advantages__block-text">Отточенная годами схема работы и грамотные специалисты гарантируют быстрое выполнение, в частности полная установка фаркопа занимает до 1 дня</div>
+					</div>
+					<div class="advantages__block">
+						<div class="advantages__block-icon"><img src="img/advantage-certificat.png" alt=""></div>
+						<div class="advantages__block-title">Сертифицированная продукция</div>
+						<div class="advantages__block-text">Используем аксессуары и комплектующие исключительно надежных производителей, имеющих всю необходимую сертификацию. Не занимаемся самоделками</div>
+					</div>
+					<div class="advantages__block">
+						<div class="advantages__block-icon"><img src="img/advantage-accuracy.png" alt=""></div>
+						<div class="advantages__block-title">Оперативная поставка товара</div>
+						<div class="advantages__block-text">Работаем напрямую с производителями. Собственный большой склад в Москве. 99% ходового товара в наличии. Доставка по МСК - на следующий день</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sales">
+			<div class="container">
+				<div class="sales__block">
+					<div class="sales__block-title dark">Кэшбэк за отзыв</div>
+					<div class="sales__block-text dark">Вернем вам <b>100 ₽</b><br>с покупки за отзыв о нас<br>на Яндекс или Google<br>Картах</div>
+					<button class="sales__block-button light">Подробнее</button>
+				</div>
+				<div class="sales__block">
+					<div class="sales__block-title light">Розетка в подарок</div>
+					<div class="sales__block-text light">При приобретении<br>и установке фаркопа<br><b>стандартная розетка</b><br>в подарок</div>
+					<button class="sales__block-button dark order__triger">Заказать</button>
+				</div>
+			</div>
+		</div>
+		<div class="map">
+			<h2>Магазин Farkop-Auto и центры установки</h2>
+			<div class="map__wrap">
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aedd271b42d88851128b4b0b97c6e9941b7a86a03f6570ded253a5bcbbaff9e2e&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+			</div>
+		</div>
+		<div class="service">
+			<h2>что устанавливаем</h2>
+			<div class="service__slider-wrap">
+				<div class="service__slider">
+					<div class="service__block">
+						<div class="service__block-img">
+							<img src="img/service_slider-1.png" alt="">
+						</div>
+						<div class="service__block-wrap">
+							<div class="service__block-title">Монтаж фаркопа клиента</div>
+							<button class="service__block-button order__triger">Заказать</button>
+							<div class="service__block-price">от 3 900 &#8381;</div>
+						</div>
+					</div>
+					<div class="service__block">
+						<div class="service__block-img">
+							<img src="img/service_slider-2.png" alt="">
+						</div>
+						<div class="service__block-wrap">
+							<div class="service__block-title">Монтаж фаркопа без электрики</div>
+							<button class="service__block-button order__triger">Заказать</button>
+							<div class="service__block-price">от 2 900 &#8381;</div>
+						</div>
+					</div>
+					<div class="service__block">
+						<div class="service__block-img">
+							<img src="img/service_slider-3.png" alt="">
+						</div>
+						<div class="service__block-wrap">
+							<div class="service__block-title">Монтаж с использованием 7 и 13 пиновым разъемом</div>
+							<button class="service__block-button order__triger">Заказать</button>
+							<div class="service__block-price">от 3 000 &#8381;</div>
+						</div>
+					</div>
+					<div class="service__block">
+						<div class="service__block-img">
+							<img src="img/service_slider-4.png" alt="">
+						</div>
+						<div class="service__block-wrap">
+							<div class="service__block-title">Монтаж со штатной электрикой</div>
+							<button class="service__block-button order__triger">Заказать</button>
+							<div class="service__block-price">от 6 500 &#8381;</div>
+						</div>
+					</div>
+					<div class="service__block">
+						<div class="service__block-img">
+							<img src="img/service_slider-5.png" alt="">
+						</div>
+						<div class="service__block-wrap">
+							<div class="service__block-title">Монтаж рейлингов</div>
+							<button class="service__block-button order__triger">Заказать</button>
+							<div class="service__block-price">от 3 000 &#8381;</div>
+						</div>
+					</div>
+					<div class="service__block">
+						<div class="service__block-img">
+							<img src="img/service_slider-6.png" alt="">
+						</div>
+						<div class="service__block-wrap">
+							<div class="service__block-title">Монтаж накрышных багажников</div>
+							<button class="service__block-button order__triger">Заказать</button>
+							<div class="service__block-price">от 7 500 &#8381;</div>
+						</div>
+					</div>
+					<div class="service__block">
+						<div class="service__block-img">
+							<img src="img/service_slider-1.png" alt="">
+						</div>
+						<div class="service__block-wrap">
+							<div class="service__block-title">Монтаж фаркопа клиента</div>
+							<button class="service__block-button order__triger">Заказать</button>
+							<div class="service__block-price">от 3 900 &#8381;</div>
+						</div>
+					</div>
+					<div class="service__block">
+						<div class="service__block-img">
+							<img src="img/service_slider-2.png" alt="">
+						</div>
+						<div class="service__block-wrap">
+							<div class="service__block-title">Монтаж фаркопа клиента</div>
+							<button class="service__block-button order__triger">Заказать</button>
+							<div class="service__block-price">от 3 900 &#8381;</div>
+						</div>
+					</div>
+					<div class="service__block">
+						<div class="service__block-img">
+							<img src="img/service_slider-3.png" alt="">
+						</div>
+						<div class="service__block-wrap">
+							<div class="service__block-title">Монтаж фаркопа клиента</div>
+							<button class="service__block-button order__triger">Заказать</button>
+							<div class="service__block-price">от 3 900 &#8381;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="news">
+			<h2>статьи, новости, портфолио</h2>
+			<div class="container">
+				<div class="news__wrap">
+					<div class="news__block">
+						<div class="news__block-img">
+							<a href="article.html"><img src="img/news-1.png" alt=""></a>
+							<a href="article.html" class="news__block-mark article">статья</a>
+						</div>
+						<div class="news__block-date">05.05.2021</div>
+						<div class="news__block-title">Новая формула расчета стоимости бензина</div>
+						<a href="article.html" class="news__block-link">Подробнее</a>
+					</div>
+					<div class="news__block">
+						<div class="news__block-img">
+							<a href="article.html"><img src="img/news-2.png" alt=""></a>
+							<a href="news.html" class="news__block-mark portfolio">портфолио</a>
+						</div>
+						<div class="news__block-date">05.05.2021</div>
+						<div class="news__block-title">Новая формула расчета стоимости бензина</div>
+						<a href="article.html" class="news__block-link">Подробнее</a>
+					</div>
+					<div class="news__block">
+						<div class="news__block-img">
+							<a href="article.html"><img src="img/news-3.png" alt=""></a>
+							<a href="news.html" class="news__block-mark news__mark">новость</a>
+						</div>
+						<div class="news__block-date">05.05.2021</div>
+						<div class="news__block-title">Новая формула расчета стоимости бензина</div>
+						<a href="article.html" class="news__block-link">Подробнее</a>
+					</div>
+					<div class="news__block">
+						<div class="news__block-img">
+							<a href="article.html"><img src="img/news-4.png" alt=""></a>
+							<a href="news.html" class="news__block-mark portfolio">портфолио</a>
+						</div>
+						<div class="news__block-date">05.05.2021</div>
+						<div class="news__block-title">Новая формула расчета стоимости бензина</div>
+						<a href="article.html" class="news__block-link">Подробнее</a>
+					</div>
+				</div>
+				<a href="news.html" class="show__more">Показать все</a>
+			</div>
+		</div>
   	</div>
 
   	<footer>
-  		
+  		<div class="container">
+  			<div class="footer__block copyright_wrap">
+  				<a href="#"><img src="img/logo-lght.png" alt="logo"></a>
+  				<div class="copyright">FARKOP-AUTO © 1996-2021</div>
+  				<p>Информация на сайте несёт информационный характер и не является публичной офертой, определяемой положениями Статьи 437 (2) ГК РФ</p>
+  			</div>
+  			<div class="footer__block list">
+  				<ul>
+  					<li><a href="#">Фаркопы</a></li>
+  					<li><a href="#">Электрика и аксессуары для фаркопов</a></li>
+  					<li><a href="#">Боксы на крышу</a></li>
+  					<li><a href="#">Велобагажники</a></li>
+  					<li><a href="#">Крепления для лыж</a></li>
+  					<li><a href="#">Защиты картера</a></li>
+  					<li><a href="#">Рейлинги и багажники</a></li>
+  					<li><a href="#">Парктроники</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer__block list">
+  				<ul>
+  					<li><a href="#">О компании</a></li>
+  					<li><a href="#">Услуги</a></li>
+  					<li><a href="#">Отзывы</a></li>
+  					<li><a href="#">Статьи и новости</a></li>
+  					<li><a href="#">Контакты</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer__block list">
+  				<ul>
+  					<li><a href="#">Вопросы и ответы</a></li>
+  					<li><a href="#">Оплата</a></li>
+  					<li><a href="#">Доставка</a></li>
+  					<li><a href="#">Возврат товара</a></li>
+  					<li><a href="#">Гарантия</a></li>
+  					<li><a href="#">Сертификаты</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer__block">
+  				<div class="footer__block-title">Способы оплаты</div>
+  				<div class="paymentMethods__wrap">
+  					<div class="paymentMethods__block">
+  						<div class="img_part"><img src="img/icon_cash.png" alt=""></div>
+  						<p>Наличные</p>
+  					</div>
+  					<div class="paymentMethods__block">
+  						<div class="img_part"><img src="img/icon_cards.png" alt=""></div>
+  						<p>Банковские карты</p>
+  					</div>
+  					<div class="paymentMethods__block">
+  						<div class="img_part"><img src="img/icon_bank.png" alt=""></div>
+  						<p>Банковский перевод</p>
+  					</div>
+  					<div class="paymentMethods__block margin">
+  						<img src="img/icon-googlPay.png" alt="">
+  					</div>
+  					<div class="paymentMethods__block">
+  						<img src="img/icon-applePay.png" alt="">
+  					</div>
+  				</div>
+  			</div>
+  			<div class="footer__block">
+  				<div class="footer__block-title">мы в соцсетях</div>
+  				<div class="social__wrap">
+  					<a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+  					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  				</div>
+  				<a href="#" class="metric"><img src="img/metric-yandex.png" alt=""></a>
+  				<a href="#" class="metric"><img src="img/metric-google.png" alt=""></a>
+  			</div>
+  		</div>
+  		<div class="bottombar">
+  			<div class="container">
+  				<a href="#">Политика конфиденциальности</a>
+  				<a href="#">Использование Cookies</a>
+  				<a href="#">Пользовательское соглашение</a>
+  				<div class="developed-wrap">
+  					<p>Дизайн сайта:</p>
+  					<a href="https://mvacorp.com" target="_blank">MVACorp</a>
+  				</div>
+  			</div>
+  		</div>
   	</footer>
 
  </div>
@@ -163,6 +1096,7 @@
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
 	<script src="lib/slick/slick.js"></script>
+	<script src="https://use.fontawesome.com/c324fc071f.js"></script>
 	<script src="lib/jquery.maskedinput/jquery.maskedinput.js"></script>
 	<script src="script.js"></script>
 </body>
